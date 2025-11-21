@@ -266,5 +266,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url('assets/js/script.js'); ?>"></script>
 
+  // ทำให้ Header เปลี่ยนเป็นสีขาวเมื่อเลื่อนลง
+<script> document.addEventListener("scroll", function () {
+  const header = document.querySelector(".site-header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+</script>
 </body>
 </html>
