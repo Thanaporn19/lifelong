@@ -1,3 +1,62 @@
+/* ------------------------------
+   HEADER – Transparent → Solid 
+------------------------------ */
+
+/* Header ตอนเริ่มต้น */
+.site-header {
+  width: 100%;
+  transition: 0.35s ease;
+  z-index: 1000;
+}
+
+/* Header ปกติโปร่งใส */
+.main-navbar {
+  background: transparent !important;
+  transition: 0.35s ease;
+}
+
+/* Header ตอนเลื่อนลง */
+.site-header.scrolled .main-navbar {
+  background: #ffffff !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+
+.btn-register {
+  background: #ff8a00;
+  color: #fff !important;
+  border: none;
+}
+
+/* ------------------------------
+   เมื่อเลื่อนลง -> Header เปลี่ยนสี
+------------------------------ */
+.site-header.scrolled .main-navbar {
+  background: #ffffff !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* --- แก้ไข: ให้ปุ่มเข้าสู่ระบบเป็นสีดำตอนเลื่อนลง (Override Bootstrap) --- */
+.site-header.scrolled .btn-login,
+.site-header.scrolled .btn-login.btn-outline-light {
+  border-color: #000 !important;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+/* ปุ่มสมัครยังเหมือนเดิม */
+.site-header.scrolled .btn-register {
+  background: #ff8a00 !important;
+  color: #fff !important;
+}
+
+/* โลโก้ย่อเมื่อเลื่อน */
+.site-header.scrolled .logo-img {
+  transform: scale(0.88);
+  transition: 0.35s ease;
+}
+
+/* ------------------------------ HERO ------------------------------ */
 .hero-section {
   position: relative;
   min-height: 580px;
@@ -11,7 +70,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1; /* <-- อยู่หลังสุด */
+  z-index: 1;
 }
 
 /* overlay อยู่ชั้นกลาง */
@@ -24,19 +83,19 @@
 /* เนื้อหาต้องอยู่หน้าสุด */
 .hero-container {
   position: relative;
-  z-index: 3; /* <-- อยู่หน้าสุด */
+  z-index: 3;
 }
 
-/* ---- เพิ่มส่วนกล่องไอคอนสี่เหลี่ยมจัตุรัส ---- */
+/* ---- กล่องไอคอนสี่เหลี่ยมจัตุรัส ---- */
 .icon-square {
-  width: 60px;          /* ปรับได้ */
-  height: 60px;         /* สี่เหลี่ยมจัตุรัส */
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff9f43; /* สีพื้นหลังกล่อง */
-  border-radius: 8px;   /* มุมมน (ถ้าต้องการคมให้ใส่ 0) */
+  background-color: #ff9f43;
+  border-radius: 8px;
   color: #fff;
-  font-size: 28px;      /* ขนาดไอคอน */
-  margin: 0 auto;       /* ทำให้กล่องอยู่กลาง */
+  font-size: 28px;
+  margin: 0 auto;
 }
