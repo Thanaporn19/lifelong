@@ -26,9 +26,8 @@
     <div class="container">
 
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="/assets/img/logo.svg" alt="ProMPT" class="me-2 logo-img">
+        <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,7 +50,7 @@
   <!-- HERO -->
   <section class="hero-section">
 
-    <img src="/assets/img/hero-bg.svg" alt="hero banner" class="hero-bg">
+    <img src="<?= base_url('assets/img/hero-bg.svg'); ?>" class="hero-bg">
     <div class="hero-overlay"></div>
 
     <div class="container hero-container d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
@@ -77,7 +76,7 @@
 
         <div class="col-lg-4">
           <div class="feature-intro p-4">
-            <img src="/assets/img/logo.svg" alt="logo" class="mb-3 logo-small">
+            <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
             <p class="text-muted">
               ระบบจัดการโครงการการเรียนรู้และส่งเสริมองค์ความรู้สำหรับผู้สูงวัยในการสนับสนุนกิจกรรมการเรียนรู้ 
               และส่งเสริมการพัฒนาผลิตภัณท์ และภูมิปัญญาสำหรับผู้สูงวัยและเพิ่มช่องทางรายได้ของกลุ่มผู้ประกอบการผลิตภัณท์ 
@@ -137,7 +136,7 @@
 
         <div class="col-md-6">
           <div class="illus-box p-4">
-            <img src="/assets/img/img1.svg" alt="illu" class="img-fluid">
+            <img src="<?= base_url('assets/img/img1.svg'); ?>" class="img-fluid">
           </div>
         </div>
 
@@ -167,7 +166,7 @@
 
         <div class="col-md-6 order-md-2">
           <div class="illus-box p-4 text-end">
-            <img src="/assets/img/img2.svg" alt="illu" class="img-fluid">
+            <img src="<?= base_url('assets/img/img2.svg'); ?>" class="img-fluid">
           </div>
         </div>
 
@@ -197,7 +196,7 @@
 
         <div class="col-md-6">
           <div class="illus-box p-4">
-            <img src="/assets/img/img3.svg" alt="illu" class="img-fluid">
+            <img src="<?= base_url('assets/img/img3.svg'); ?>" class="img-fluid">
           </div>
         </div>
 
@@ -240,7 +239,7 @@
       <div class="row">
 
         <div class="col-md-4">
-          <img src="/assets/img/logo.svg" alt="logo" style="max-width: 200px;">
+          <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
         </div>
 
         <div class="col-md-8">
@@ -265,7 +264,7 @@
   <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="<?= base_url('assets/js/script.js'); ?>"></script>
 
 </body>
 </html>
