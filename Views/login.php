@@ -2,8 +2,10 @@
 <html lang="th">
 <head>
     <meta charset="utf-8">
-    <title>CMU School of Lifelong Education</title>
+    <title>วิทยาลัยการศึกษาตลอดชีวิต</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="<?= base_url('assets/img/logo_lifelong11.png') ?>">
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
