@@ -1,6 +1,16 @@
 /* ------------------------------
    HEADER – Transparent → Solid 
 ------------------------------ */
+/* ขนาดโลโก้ใน Navbar เท่านั้น */
+.logo-navbar {
+    width: 250px;
+    height: auto;
+}
+
+/* ถ้าตอนเลื่อนอยากให้เล็กลงหรือใหญ่ขึ้น */
+.site-header.scrolled .logo-navbar {
+    width: 250px;
+}
 
 /* Header ตอนเริ่มต้น */
 .site-header {
@@ -21,30 +31,29 @@
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
+/* ปุ่มเข้าสู่ระบบ – ปกติ */
+.btn-login {
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  transition: color 0.3s ease;
+}
 
+/* ปุ่มเข้าสู่ระบบ – เลื่อนลง */
+.site-header.scrolled .btn-login {
+  color: #000 !important;
+}
+
+/* ปุ่มสมัครสมาชิก */
 .btn-register {
   background: #ff8a00;
   color: #fff !important;
   border: none;
+  transition: background 0.3s ease;
 }
 
-/* ------------------------------
-   เมื่อเลื่อนลง -> Header เปลี่ยนสี
------------------------------- */
-.site-header.scrolled .main-navbar {
-  background: #ffffff !important;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-}
-
-/* --- แก้ไข: ให้ปุ่มเข้าสู่ระบบเป็นสีดำตอนเลื่อนลง (Override Bootstrap) --- */
-.site-header.scrolled .btn-login,
-.site-header.scrolled .btn-login.btn-outline-light {
-  border-color: #000 !important;
-  color: #000 !important;
-  background-color: transparent !important;
-}
-
-/* ปุ่มสมัครยังเหมือนเดิม */
+/* ปุ่มสมัครสมาชิก – เลื่อนลง (เหมือนเดิม) */
 .site-header.scrolled .btn-register {
   background: #ff8a00 !important;
   color: #fff !important;
@@ -99,3 +108,71 @@
   font-size: 28px;
   margin: 0 auto;
 }
+
+.cta-bar .container {
+    position: relative;
+    z-index: 2;
+}
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #343131; /* วงกลมสีเทา */
+  border-radius: 50%;
+  margin-right: 12px; /* ระยะห่างระหว่างไอคอน */
+  text-decoration: none;
+}
+
+.social-icon i {
+  color: #ffffff; /* ไอคอนสีขาว */
+  font-size: 20px;
+}
+
+/* ------------------------------ 
+   FOOTER
+------------------------------ */
+.site-footer {
+  background: url('assets/img/footer-bg.svg') center/cover no-repeat,
+              #000; /* สีดำรอง */
+}
+.site-footer::before {
+  background: rgba(0,0,0,0.75);
+}
+
+/* ลบเส้นใต้ลิงก์ทั้งหมดใน footer */
+.site-footer a {
+  text-decoration: none !important;
+}
+
+.footer-copy-line {
+  width: 100%;            /* ปรับความยาวตามต้องการ 50–100% */
+  border-top: 1px solid #655f5f; /* ขนาดเส้น + สี */
+  padding-top: 50px; /* เว้นระยะจากเส้น */
+  margin-top: 60px;  /* ห่างจากเมนูด้านบน */
+}
+
+/* ------------------------------
+   ใช้ฟอนต์ Prompt ทั้งเว็บ
+------------------------------ */
+:root {
+  --bs-font-sans-serif: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* บังคับให้ทุก element ใช้ Prompt */
+body, html, * {
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* สำหรับปุ่มและ navbar ที่ Bootstrap กำหนด font-family เอง */
+.navbar, .navbar-brand, .btn, h1, h2, h3, h4, h5, h6, p, span, li, a {
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+
+
+
+
+
+
