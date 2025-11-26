@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="th">
 <head>
-  <base href="<?= base_url(); ?>">
-
+  <base href="<?= base_url('/') ?>">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PROMPT</title>
+  <title>CMU School of Lifelong Education</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +28,7 @@
     <div class="container">
 
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
+        <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-navbar">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@
             <a class="btn btn-outline-light btn-login" href="#">เข้าสู่ระบบ</a>
           </li>
           <li class="nav-item ms-2">
-            <a class="btn btn-orange btn-register" href="#">สมัครสมาชิก</a>
+            <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>">สมัครสมาชิก</a>
           </li>
         </ul>
       </div>
@@ -56,17 +58,14 @@
     <div class="container hero-container d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
       <div class="row w-100">
         <div class="col-lg-7 mx-auto">
-          <h1 class="hero-title">
-            จัดการโครงการ พัฒนาหลักสูตร<br>ต่อยอดกิจกรรม แบบครบวงจร
+          <h1 class="hero-title text-white">
+              จัดการโครงการ พัฒนาหลักสูตร<br>ต่อยอดกิจกรรม แบบครบวงจร
           </h1>
-
-          <a class="btn btn-lg btn-orange hero-cta mt-3" href="#">
-            เริ่มต้นใช้งาน →
-          </a>
-        </div>
+            <div class="mt-4">
+                <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>"> เริ่มต้นใช้งาน → </a>
+            </div>
       </div>
     </div>
-
   </section>
 
   <!-- FEATURES CARDS -->
@@ -82,7 +81,7 @@
               และส่งเสริมการพัฒนาผลิตภัณท์ และภูมิปัญญาสำหรับผู้สูงวัยและเพิ่มช่องทางรายได้ของกลุ่มผู้ประกอบการผลิตภัณท์ 
               หรือบริการที่เข้าร่วม
             </p>
-            <a class="btn btn-outline-success btn-sm" href="#">เรียนรู้โครงการ</a>
+            <a class="btn btn-success btn-sm" href="#">เรียนรู้โครงการ</a>
           </div>
         </div>
 
@@ -92,8 +91,8 @@
             <div class="icon-circle orange">
               <i class="bi bi-easel-fill"></i>
             </div>
-            <h6 class="mt-2">การบริหารโครงการ</h6>
-            <p class="small text-muted">
+            <h4 class="mt-2">การบริหารโครงการ</h4>
+            <p class="text-muted">
               ระบบการบริหารทีมและจัดการโครงการแบบเป็นระบบและครบวงจร
             </p>
           </div>
@@ -105,8 +104,8 @@
             <div class="icon-circle purple">
               <i class="bi bi-briefcase-fill"></i>
             </div>
-            <h6 class="mt-2">การยื่นโครงการ</h6>
-            <p class="small text-muted">
+            <h4 class="mt-2">การยื่นโครงการ</h4>
+            <p class="text-muted">
               สามารถยื่นโครงการเพื่อขอประเมินการรับทุนได้อย่างสะดวกและรวดเร็ว
             </p>
           </div>
@@ -118,8 +117,8 @@
             <div class="icon-circle green">
               <i class="bi bi-mortarboard-fill"></i>
             </div>
-            <h6 class="mt-2">หลักสูตรการเรียนรู้</h6>
-            <p class="small text-muted">
+            <h4 class="mt-2">หลักสูตรการเรียนรู้</h4>
+            <p class="text-muted">
               หลักสูตรมากมายเพื่อการจัดการโครงการทั้งแบบออนไลน์และแบบอบรมเชิงปฏิบัติ
             </p>
           </div>
@@ -141,7 +140,7 @@
         </div>
 
         <div class="col-md-6">
-          <h4>การบริหารโครงการ</h4>
+          <h3>การบริหารโครงการ</h3>
           <p class="text-muted">
             จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
           </p>
@@ -201,7 +200,7 @@
         </div>
 
         <div class="col-md-6">
-          <h4>หลักสูตรการเรียนรู้</h4>
+          <h3>หลักสูตรการเรียนรู้</h3>
           <p class="text-muted">
             หลักสูตรทั้งแบบออนไลน์และแบบอบรมเชิงปฏิบัติ
           </p>
@@ -220,16 +219,15 @@
   </section>
 
   <!-- CTA BAR -->
-  <section class="cta-bar py-4">
+  <section class="cta-bar py-5" 
+    style="background-image: url('<?= base_url("assets/img/bg.svg"); ?>');">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="d-flex align-items-center">
-        <div class="cta-icon me-3">▶</div>
         <div>
-          <h6 class="mb-0">เริ่มต้นใช้งานระบบไปกับเรา</h6>
+          <h4 class="mb-0">เริ่มต้นใช้งานระบบไปกับเรา</h4>
         </div>
       </div>
-
-      <a class="btn btn-orange" href="#">เริ่มเข้าสู่ระบบ →</a>
+        <a class="btn btn-orange btn-register"  href="#"> เริ่มเข้าสู่ระบบ → </a>
     </div>
   </section>
 
@@ -239,24 +237,31 @@
       <div class="row">
 
         <div class="col-md-4">
-          <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
-        </div>
+          <img src="<?= base_url('assets/img/logo-footer.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
 
+            <div class="mb-3">
+              <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-line"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div> 
+      
         <div class="col-md-8">
           <ul class="list-inline text-md-end mt-3 mt-md-0">
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">หน้าหลัก</a></li>
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">Dashboard</a></li>
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">การเรียนรู้</a></li>
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">ระบบประเมิน</a></li>
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">ติดต่อเรา</a></li>
-            <li class="list-inline-item me-3"><a class="text-muted" href="#">สำหรับผู้ดูแลระบบ</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">หน้าหลัก</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">Dashboard</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">การเรียนรู้</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">ระบบประเมิน</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">ติดต่อเรา</a></li>
+            <li class="list-inline-item me-3"><a class="text-white" href="#">สำหรับผู้ดูแลระบบ</a></li>
           </ul>
+        <p class="footer-copy footer-copy-line text-muted small mt-3">
+      <a class="text-white" href="#">
+        © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
+      </a>
+        </p>
 
-          <p class="footer-copy text-muted small mt-3">
-            © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
-          </p>
         </div>
-
       </div>
     </div>
   </footer>
@@ -266,7 +271,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url('assets/js/script.js'); ?>"></script>
 
-  // ทำให้ Header เปลี่ยนเป็นสีขาวเมื่อเลื่อนลง
+  <!-- ทำให้ Header เปลี่ยนเป็นสีขาวเมื่อเลื่อนลง -->
 <script> document.addEventListener("scroll", function () {
   const header = document.querySelector(".site-header");
   if (window.scrollY > 50) {
