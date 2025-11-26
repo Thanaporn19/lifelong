@@ -25,12 +25,12 @@
 
         /* hero background */
         .hero-wrapper {
-    min-height: 100vh;
-    background-image: url('assets/img/bg-login.svg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
+            min-height: 100vh;
+            background-image: url('assets/img/bg-login.svg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }   
 
         .hero-overlay {
             position: absolute;
@@ -59,12 +59,12 @@
 
         /* main card */
         .login-card {
-    background: rgba(255,255,255,0.96);
-    border-radius: 24px;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
-    backdrop-filter: blur(12px);
-    margin-top: 250px; /* 👈 เพิ่มตรงนี้ เพื่อเลื่อนลงมา */
-}
+            background: rgba(255,255,255,0.96);
+            border-radius: 24px;
+            box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+            backdrop-filter: blur(12px);
+            margin-top: 250px; /* เพิ่มตรงนี้ เพื่อเลื่อนลงมา */
+        }
 
         .login-card .form-title {
             font-size: 1.5rem;
