@@ -4,7 +4,9 @@
   <base href="<?= base_url('/') ?>">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CMU School of Lifelong Education</title>
+  <title>วิทยาลัยการศึกษาตลอดชีวิต</title>
+
+  <link rel="icon" type="image/png" href="<?= base_url('assets/img/logo_lifelong11.png') ?>">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -245,7 +247,7 @@
               <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
         </div>
       </div> 
-      
+
         <div class="col-md-8">
           <ul class="list-inline text-md-end mt-3 mt-md-0">
             <li class="list-inline-item me-3"><a class="text-white" href="#">หน้าหลัก</a></li>
