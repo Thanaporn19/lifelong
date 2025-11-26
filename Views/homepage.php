@@ -71,93 +71,61 @@
   </section>
 
   <!-- FEATURES CARDS -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row align-items-center g-4">
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
 
-        <div class="col-lg-4">
-          <div class="feature-intro p-4">
-            <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
-            <p class="text-muted">
-              ระบบจัดการโครงการการเรียนรู้และส่งเสริมองค์ความรู้สำหรับผู้สูงวัยในการสนับสนุนกิจกรรมการเรียนรู้ 
-              และส่งเสริมการพัฒนาผลิตภัณท์ และภูมิปัญญาสำหรับผู้สูงวัยและเพิ่มช่องทางรายได้ของกลุ่มผู้ประกอบการผลิตภัณท์ 
-              หรือบริการที่เข้าร่วม
-            </p>
-            <a class="btn btn-success btn-sm" href="#">เรียนรู้โครงการ</a>
-          </div>
-        </div>
-
-        <!-- CARD 1 -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="card feature-card p-3 h-100 shadow-sm text-center">
-            <div class="icon-circle orange">
-              <i class="bi bi-easel-fill"></i>
-            </div>
-            <h4 class="mt-2">การบริหารโครงการ</h4>
-            <p class="text-muted">
-              ระบบการบริหารทีมและจัดการโครงการแบบเป็นระบบและครบวงจร
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="card feature-card p-3 h-100 shadow-sm text-center">
-            <div class="icon-circle purple">
-              <i class="bi bi-briefcase-fill"></i>
-            </div>
-            <h4 class="mt-2">การยื่นโครงการ</h4>
-            <p class="text-muted">
-              สามารถยื่นโครงการเพื่อขอประเมินการรับทุนได้อย่างสะดวกและรวดเร็ว
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="col-sm-6 col-lg-4 mb-3">
-          <div class="card feature-card p-3 h-100 shadow-sm text-center">
-            <div class="icon-circle green">
-              <i class="bi bi-mortarboard-fill"></i>
-            </div>
-            <h4 class="mt-2">หลักสูตรการเรียนรู้</h4>
-            <p class="text-muted">
-              หลักสูตรมากมายเพื่อการจัดการโครงการทั้งแบบออนไลน์และแบบอบรมเชิงปฏิบัติ
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTENT SECTION 1 -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <div class="row align-items-center g-4">
-
-        <div class="col-md-6">
-          <div class="illus-box p-4">
-            <img src="<?= base_url('assets/img/img1.svg'); ?>" class="img-fluid">
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <h3>การบริหารโครงการ</h3>
-          <p class="text-muted">
-            จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
+      <!-- ซ้ายมือ: ไม่เลื่อน -->
+      <div class="col-lg-4">
+        <div class="feature-intro p-4">
+          <img src="<?= base_url('assets/img/logo.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
+          <p class="text-muted mt-3">
+            ระบบจัดการโครงการการเรียนรู้และส่งเสริมองค์ความรู้สำหรับผู้สูงวัยในการสนับสนุนกิจกรรมการเรียนรู้ 
+            และส่งเสริมการพัฒนาผลิตภัณท์ และภูมิปัญญาสำหรับผู้สูงวัยและเพิ่มช่องทางรายได้ของกลุ่มผู้ประกอบการผลิตภัณท์ 
+            หรือบริการที่เข้าร่วม
           </p>
-
-          <ul class="list-unstyled">
-            <li class="mb-2"><strong class="me-2">•</strong> ระบบโปรเจคทาสก์</li>
-            <p class="text-muted">กำหนดทาสก์ในการทำงาน ทำให้คุณสามารถติดตามงานได้อย่างครบถ้วน</p>
-
-            <li class="mb-2"><strong class="me-2">•</strong> การติดตามโครงการ</li>
-            <p class="text-muted">สามารถติดตามสถิติของโครงการเพื่อช่วยพัฒนาและแก้ไขงานได้</p>
-          </ul>
+          <a class="btn btn-success btn-sm mt-3" href="#">เรียนรู้โครงการ</a>
         </div>
-
       </div>
+
+      <!-- ขวามือ: กล่อง 3 กล่อง แบบเรียงแนวนอน -->
+<div class="col-lg-8">
+  <div class="scroll-board d-flex gap-3 overflow-auto py-2">
+    <!-- CARD 1 -->
+    <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
+      <div class="icon-circle orange">
+        <i class="bi bi-easel-fill"></i>
+      </div>
+      <h4 class="mt-2">การบริหารโครงการ</h4>
+      <p class="text-muted mb-0">
+        ระบบการบริหารทีมและจัดการโครงการแบบเป็นระบบและครบวงจร
+      </p>
     </div>
+
+    <!-- CARD 2 -->
+    <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
+      <div class="icon-circle purple">
+        <i class="bi bi-briefcase-fill"></i>
+      </div>
+      <h4 class="mt-2">การยื่นโครงการ</h4>
+      <p class="text-muted mb-0">
+        สามารถยื่นโครงการเพื่อขอประเมินการรับทุนได้อย่างสะดวกและรวดเร็ว
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
+      <div class="icon-circle green">
+        <i class="bi bi-mortarboard-fill"></i>
+      </div>
+      <h4 class="mt-2">หลักสูตรการเรียนรู้</h4>
+      <p class="text-muted mb-0">
+        หลักสูตรมากมายเพื่อการจัดการโครงการทั้งแบบออนไลน์และแบบอบรมเชิงปฏิบัติ
+      </p>
+    </div>
+  </div> <!-- /.scroll-board -->
+</div>
+
   </section>
 
   <!-- CONTENT SECTION 2 -->
