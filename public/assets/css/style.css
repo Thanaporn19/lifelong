@@ -95,18 +95,19 @@
   z-index: 3;
 }
 
-/* ---- กล่องไอคอนสี่เหลี่ยมจัตุรัส ---- */
-.icon-square {
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ff9f43;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 28px;
-  margin: 0 auto;
+.scroll-board .card {
+  min-width: 200px;          /* ความกว้างกล่อง */
+  height: 250px;             /* ความสูงกล่อง */
+  scroll-snap-align: start;  /* snap เริ่มต้นแต่ละกล่อง */
+  flex-shrink: 1;            /* ย่อขนาด */
+  border-radius: 12px;       /* ขอบมน */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* เงาเล็ก ๆ น่ารัก */
+  padding: 20px;             /* ระยะห่างภายในกล่อง */
+  transition: transform 0.2s ease; /* animation เล็ก ๆ เวลาหยุด hover */
+}
+
+.scroll-board .card:hover {
+  transform: translateY(-5px); /* effect เล็ก ๆ เวลาชี้เมาส์ */
 }
 
 .cta-bar .container {
