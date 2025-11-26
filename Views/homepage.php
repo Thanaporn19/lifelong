@@ -127,6 +127,36 @@
 </div>
 
   </section>
+      
+<!-- CONTENT SECTION 1 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center g-4">
+
+        <div class="col-md-6">
+          <div class="illus-box p-4">
+            <img src="<?= base_url('assets/img/img1.svg'); ?>" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3>การบริหารโครงการ</h3>
+          <p class="text-muted">
+            จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-2"><strong class="me-2">•</strong> ระบบโปรเจคทาสก์ </li>
+            <p class="text-muted">กำหนดทาสก์ในการทำงาน ทำให้คุณสามารถติดตามงานได้อย่างครบถ้วน</p>
+
+            <li class="mb-2"><strong class="me-2">•</strong> การติดตามโครงการ </li>
+            <p class="text-muted">สามารถติดตามสถิติของโครงการ ช่วยให้คุณและทีมคุณ แก้ไขและพัฒนาโครงการได้อย่างสะดวก</p>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- CONTENT SECTION 2 -->
   <section class="py-5">
