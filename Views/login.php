@@ -25,163 +25,6 @@
     <!-- CSS login แบบแยกไฟล์ -->
     <link rel="stylesheet" href="<?= base_url('assets/css/login.css'); ?>">
 
-    <style>
-        body {
-            font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-            background: #f5f7fb; /* สีพื้นหลัง */
-        }
-
-        /* hero background */
-        .hero-wrapper {
-            min-height: 100vh; /* สูงเท่าหน้าจอ */
-            background-image: url('assets/img/bg-login.svg'); /* รูปพื้นหลัง */
-            background-size: cover; /* ขยายให้เต็ม */
-            background-position: center; /* จัดตำแหน่ง */
-            position: relative; /* เพื่อรองรับ overlay */
-        }   
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0; /* ครอบคลุมเต็มพื้นที่ */
-            background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.35)); /* ไล่สีทึบเพื่ออ่านง่าย */
-        }
-
-        /* top navbar */
-        .top-navbar {
-            background-color: rgba(255,255,255,0.95); /* สีพื้นบางๆ แบบโปร่ง */
-            backdrop-filter: blur(8px); /* เบลอพื้นหลัง */
-            box-shadow: 0 4px 18px rgba(0,0,0,0.08); /* เงา */
-        }
-
-        .top-navbar .navbar-brand {
-            display: flex; /* จัดเรียงโลโก้กับชื่อ */
-            align-items: center;
-            gap: 0.5rem; /* เว้นระยะ */
-            font-weight: 600;
-        }
-
-        .top-navbar .brand-text-small {
-            font-size: .8rem; /* ขนาดตัวอักษรเล็ก */
-            line-height: 1.1;
-        }
-
-        /* การ์ด login หลัก */
-        .login-card {
-            background: rgba(255,255,255,0.96);
-            border-radius: 24px;
-            box-shadow: 0 18px 50px rgba(0,0,0,0.22);
-            backdrop-filter: blur(12px);
-            margin-top: 250px; /* เลื่อนลง */
-        }
-
-        .login-card .form-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 0 1px 7px rgba(0,0,0,0.55); /* ทำให้ตัวหนังสืออ่านง่ายขึ้น */
-        }
-
-        .login-card .form-subtitle {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ffffff;
-            text-shadow: 0 1px 6px rgba(0,0,0,0.55);
-        }
-
-        .login-card-inner {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 2rem 1.5rem; /* ระยะห่างด้านใน */
-        }
-
-        /* ปุ่ม provider เช่น Google Line CMU */
-        .provider-btn {
-            border-radius: 999px; /* วงรี */
-            font-weight: 500;
-            border-width: 1.5px;
-            padding: .55rem 1rem;
-        }
-
-        .btn-google { border-color: #dadce0; }
-        .btn-google i { color: #db4437; } /* สีโลโก้ Google */
-
-        .btn-line {
-            background-color: #06C755;
-            border-color: #06C755;
-            color: #ffffff;
-        }
-
-        .btn-cmu {
-            border-color: #6c2c7b; /* สีม่วง CMU */
-        }
-
-        .signup-outline {
-            border-radius: 999px;
-            padding: .6rem 1.25rem;
-            font-weight: 500;
-        }
-
-        .split-line {
-            border-left: 1px solid #e4e4e4; /* เส้นแบ่งระหว่างซ้าย/ขวา */
-        }
-
-        /* ปุ่มม่วง CMU */
-        .btn-primary-purple {
-            background-color: #6f3fa8;
-            border-color: #6f3fa8;
-            border-radius: 999px;
-            font-weight: 600;
-            color: #fff !important;
-        }
-
-        .btn-primary-purple:hover {
-            background-color: #5a308b;
-            border-color: #5a308b;
-        }
-
-        .help-link { font-size: .9rem; }
-
-        /* footer */
-        .lifelong-footer {
-            font-size: .85rem;
-            color: #f8f9fa;
-        }
-
-        .lifelong-footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .lifelong-footer a:hover { text-decoration: underline; }
-
-        /* mobile responsive */
-        @media (max-width: 991.98px) {
-            .hero-wrapper { background-position: center bottom; }
-
-            .login-card {
-                box-shadow: none;
-                border-radius: 0;
-                background: transparent;
-            }
-
-            .login-card-inner {
-                border-radius: 16px;
-                padding: 1.5rem 1.25rem;
-            }
-
-            .split-line {
-                border-left: none;
-                border-top: 1px solid #e4e4e4; /* เส้นบนแทน */
-                margin-top: 1rem;
-                padding-top: 1.5rem;
-            }
-
-            .desktop-title-area {
-                text-align: center; /* ชื่ออยู่กลาง */
-                margin-bottom: 1rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -243,9 +86,6 @@
         <div class="row justify-content-center align-items-center" style="min-height: 90vh;">
             <div class="col-12 col-lg-10">
 
-                <!-- การ์ด Login -->
-                <div class="login-card p-3 p-lg-4 mt-5 mt-lg-0 position-relative">
-
                     <!-- โลโก้ + ชื่อระบบ -->
                     <div class="row">
                         <div class="col-12 text-center mb-3 desktop-title-area">
@@ -254,10 +94,9 @@
                             <div class="form-subtitle">เข้าสู่ระบบ CMU School of Lifelong Education</div>
                             <div class="form-title">Chiang Mai University</div>
                         </div>
-                    </div>
 
-                    <!-- กล่องด้านใน -->
-                    <div class="login-card-inner">
+                    <!-- กล่อง -->
+                    <div class="login-card p-3 p-lg-4 mt-5 mt-lg-0 position-relative">
                         <div class="row">
 
                             <!-- ฝั่งซ้าย: ปุ่ม Social Login -->
@@ -298,11 +137,12 @@
                             <!-- เส้นแบ่งตรงกลาง -->
                             <div class="col-12 col-lg-1 d-flex justify-content-center align-items-center">
                                 <div class="d-none d-lg-block split-line text-center">
-                                    <span class="badge rounded-pill text-bg-light">หรือ</span>
-                                </div>
-                                <div class="d-lg-none w-100 text-center mt-2 mb-3">
-                                    <span class="badge rounded-pill text-bg-light">หรือ</span>
-                                </div>
+                                    <div class="vertical-split-line">
+                                        <span class="line top"></span>
+                                        <span class="text">หรือ</span>
+                                        <span class="line bottom"></span>
+                                    </div>
+                                 </div>
                             </div>
 
                             <!-- ฝั่งขวา: Login account -->
