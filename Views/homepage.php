@@ -27,30 +27,6 @@
   <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/homepage.css'); ?>">
 
-  <style>
-    /* สไตล์ปุ่มสีส้ม */
-    .btn-orange {
-      background-color: #ff8a00;
-      color: #fff !important;
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-    }
-    .btn-orange:hover {
-      background-color: #e07800;
-      color: #fff !important;
-    }
-
-    /* ระยะห่างด้านบน hero ให้ขยับตำแหน่งข้อความ */
-    .hero-container {
-      padding-top: 150px;
-    }
-    @media (max-width: 991.98px) {
-      .hero-container {
-        padding-top: 100px;
-      }
-    }
-  </style>
 </head>
 
 <body>
