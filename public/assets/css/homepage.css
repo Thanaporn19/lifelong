@@ -1,0 +1,175 @@
+/* ------------------------------
+   HEADER – Transparent → Solid 
+   ส่วนควบคุม Header จากโปร่งใส → สีพื้นเมื่อเลื่อนลง
+------------------------------ */
+
+/* ขนาดโลโก้ใน Navbar (ตอนปกติ) */
+.logo-navbar {
+    width: 250px;        /* กว้างของโลโก้ */
+    height: auto;        /* ปรับสูงอัตโนมัติให้เหมาะสม */
+}
+
+/* ขนาดโลโก้เมื่อ Header อยู่สถานะเลื่อนลง (scrolled) */
+.site-header.scrolled .logo-navbar {
+    width: 250px;        /* จะเล็ก/ใหญ่กว่านี้ก็แก้ตรงนี้ */
+}
+
+/* Header ตอนเริ่มต้น */
+.site-header {
+  width: 100%;            /* กว้างเต็มหน้าจอ */
+  transition: 0.35s ease; /* ทำให้เอฟเฟกต์เปลี่ยนลื่นไหล */
+  z-index: 1000;          /* อยู่ด้านบนสุด เหนือคอนเทนต์อื่น */
+}
+
+/* Navbar สถานะเริ่มต้น (โปร่งใส) */
+.main-navbar {
+  background: transparent !important; /* โปร่งใส */
+  transition: 0.35s ease;             /* เอฟเฟกต์ลื่นไหล */
+}
+
+/* Navbar เมื่อเลื่อนลง (มีพื้นหลัง + เงา) */
+.site-header.scrolled .main-navbar {
+  background: #ffffff !important;     /* พื้นหลังขาว */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* เงาเบา ๆ */
+}
+
+/* ปุ่มเข้าสู่ระบบ – สถานะเริ่มต้น */
+.btn-login {
+  color: white !important;      /* ตัวอักษรขาวเมื่อยังโปร่งใส */
+  background-color: transparent !important; /* ไม่มีพื้นหลัง */
+  border: none !important;      /* ไม่มีเส้นขอบ */
+  padding: 0 !important;        /* ไม่เอา padding */
+  transition: color 0.3s ease;  /* เปลี่ยนสีเนียนขึ้น */
+}
+
+/* ปุ่มเข้าสู่ระบบ – เมื่อเลื่อนลง */
+.site-header.scrolled .btn-login {
+  color: #000 !important;       /* สีดำเพื่อดูชัดบนพื้นหลังขาว */
+}
+
+/* ปุ่มสมัครสมาชิก – ปกติ */
+.btn-register {
+  background: #ff8a00;          /* สีส้ม */
+  color: #fff !important;       /* ข้อความสีขาว */
+  border: none;                 /* ไม่มีเส้นขอบ */
+  transition: background 0.3s ease; /* ลื่นไหลเวลาเปลี่ยนสี */
+}
+
+/* ปุ่มสมัครสมาชิก – เมื่อเลื่อนลง */
+.site-header.scrolled .btn-register {
+  background: #44936a !important; /* เปลี่ยนเป็นสีเขียว */
+  color: #fff !important;         /* ข้อความยังเป็นสีขาว */
+}
+
+/* ย่อโลโก้รูปภาพทั่วไปใน header เมื่อเลื่อนลง */
+.site-header.scrolled .logo-img {
+  transform: scale(0.88);   /* ลดขนาด 88% */
+  transition: 0.35s ease;   /* เอฟเฟกต์ลื่นไหล */
+}
+
+/* ------------------------------ HERO SECTION ------------------------------ */
+
+/* โซน Hero (ส่วนแรกของหน้า) */
+.hero-section {
+  position: relative;  /* ช่วยให้จัดซ้อนชั้นได้ */
+  min-height: 580px;   /* สูงขั้นต่ำ */
+  overflow: hidden;    /* ตัดสิ่งที่ล้นออกนอกกรอบ */
+}
+
+/* รูปพื้นหลังของ Hero */
+.hero-bg {
+  position: absolute;  /* อยู่ชั้นหลังสุด */
+  inset: 0;            /* top-right-bottom-left = 0 */
+  width: 100%;         /* เต็มกรอบ */
+  height: 100%;        /* เต็มความสูง */
+  object-fit: cover;   /* ครอบพื้นที่ให้เต็มแบบไม่ยืดผิดเพี้ยน */
+  z-index: 1;          /* ชั้นล่างสุด */
+}
+
+/* Overlay อยู่ตรงกลางระหว่างพื้นหลังกับเนื้อหา */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;          /* อยู่กลาง */
+}
+
+/* เนื้อหาที่อยู่บนสุดของ Hero */
+.hero-container {
+  position: relative;
+  z-index: 3;          /* อยู่เหนือทุกอย่างใน hero */
+}
+
+/* ------------------------------ SCROLL BOARD ------------------------------ */
+
+/* กล่อง card ใน Scroll Board */
+.scroll-board .card {
+  min-width: 200px;        /* ความกว้างกล่อง */
+  height: 250px;           /* ความสูงกล่อง */
+  scroll-snap-align: start;/* ให้ snap เมื่อหยุดเลื่อน */
+  flex-shrink: 1;          /* กล่องย่อได้ */
+  border-radius: 12px;     /* ขอบมน */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* เงานุ่ม ๆ */
+  padding: 20px;           /* ระยะห่างภายใน */
+  transition: transform 0.2s ease; /* เอฟเฟกต์เวลา hover */
+}
+
+/* เอฟเฟกต์ลอยนิด ๆ เมื่อชี้เมาส์ */
+.scroll-board .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ------------------------------ CTA BAR ------------------------------ */
+
+.cta-bar .container {
+    position: relative; /* เพื่อวาง content บน overlay ได้ */
+    z-index: 2;
+}
+
+/* ------------------------------ SOCIAL ICONS ------------------------------ */
+
+/* วงกลมไอคอนโซเชียล */
+.social-icon {
+  display: inline-flex;         /* จัดกึ่งกลางแนวตั้งและแนวนอน */
+  justify-content: center;
+  align-items: center;
+  width: 40px;                  /* ขนาดวงกลม */
+  height: 40px;
+  background-color: #343131;    /* สีเทาทึบ */
+  border-radius: 50%;           /* ทำให้เป็นวงกลม */
+  margin-right: 12px;           /* เว้นระหว่างไอคอน */
+  text-decoration: none;        /* ไม่ให้มีเส้นใต้ */
+}
+
+/* ไอคอนด้านใน */
+.social-icon i {
+  color: #ffffff;               /* ไอคอนสีขาว */
+  font-size: 20px;              /* ขนาดไอคอน */
+}
+
+/* ------------------------------ 
+   FOOTER
+------------------------------ */
+
+/* พื้นหลัง Footer */
+.site-footer {
+  background: url('assets/img/footer-bg.svg') center/cover no-repeat, /* รูปพื้นหลัง */
+              #000; /* สีดำรอง */
+}
+
+/* Overlay มืดทับ footer */
+.site-footer::before {
+  background: rgba(0,0,0,0.75); /* ความมืด 75% */
+}
+
+/* ลบเส้นใต้ของลิงก์ใน footer ทั้งหมด */
+.site-footer a {
+  text-decoration: none !important;
+}
+
+/* เส้นคั่นด้านล่างสุด (copyright line) */
+.footer-copy-line {
+  width: 100%;                     /* ความยาวเส้น */
+  border-top: 1px solid #655f5f;   /* สีเส้น + ความหนา */
+  padding-top: 50px;               /* เว้นบนจากเส้น */
+  margin-top: 60px;                /* ระยะห่างจากเมนูบน */
+}
