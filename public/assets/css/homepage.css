@@ -67,6 +67,29 @@
   transition: 0.35s ease;   /* เอฟเฟกต์ลื่นไหล */
 }
 
+    /* สไตล์ปุ่มสีส้ม */
+    .btn-orange {
+      background-color: #c64671;
+      color: #fff !important;
+      border: none;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .btn-orange:hover {
+      background-color: #e07800;
+      color: #fff !important;
+    }
+
+    /* ระยะห่างด้านบน hero ให้ขยับตำแหน่งข้อความ */
+    .hero-container {
+      padding-top: 150px;
+    }
+    @media (max-width: 991.98px) {
+      .hero-container {
+        padding-top: 100px;
+      }
+    }
+
 /* ------------------------------ HERO SECTION ------------------------------ */
 
 /* โซน Hero (ส่วนแรกของหน้า) */
