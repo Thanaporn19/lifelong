@@ -1,163 +1,184 @@
-/* login.css */
-
 /* ------------------------------
    ฟอนต์และพื้นฐาน
 ------------------------------ */
 
 /* กล่องใหญ่ของหน้า login มีพื้นหลังเป็นภาพ + กำหนดให้สูงเต็มจอ */
 .hero-wrapper {
-    min-height: 100vh;
-    background-image: url('assets/img/bg-login.svg');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    min-height: 100vh;                               /* ความสูงขั้นต่ำให้เต็มหน้าจอ */
+    background-image: url('../img/bg-login.svg');    /* พื้นหลังเป็นภาพสำหรับหน้า login */
+    background-size: cover;                          /* ย่อ/ขยายภาพให้เต็มพื้นที่ */
+    background-position: center;                     /* จัดภาพให้อยู่กลาง */
+    position: relative;                              /* ตั้งตำแหน่งเป็น relative เพื่อวาง overlay หรือ element ภายใน */
 }
-
-/* ชั้นมืดโอเวอร์เลย์ด้านบนของ hero เพื่อทำให้ตัวหนังสืออ่านง่ายขึ้น */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.35));
+.desktop-title-area {
+    padding-top: 50px;   /* เพิ่มพื้นที่บนโลโก้+ข้อความ */
+    padding-bottom: 30px; /* เพิ่มพื้นที่ระหว่างข้อความกับกล่อง login */
+}
+.row.justify-content-center.align-items-center {
+    min-height: auto; /* หรือเอา 90vh ออกแล้วใช้ padding แทน */
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* ------------------------------
    TOP NAVBAR
 ------------------------------ */
-/* แถบด้านบนโปร่งขาว + เบลอเบา ๆ */
 .top-navbar {
-    background-color: rgba(255,255,255,0.95);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    background-color: rgba(255,255,255,0.95);       /* พื้นหลังโปร่งเล็กน้อย */
+    backdrop-filter: blur(8px);                      /* ทำให้เบลอพื้นหลังใต้ navbar */
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);        /* เงาเล็กๆ */
 }
 
-/* โลโก้ด้านซ้ายใน navbar */
 .top-navbar .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
+    display: flex;                                   /* ใช้ flex จัด layout ของ brand */
+    align-items: center;                             /* จัดแนวแกนตั้งให้ตรงกลาง */
+    gap: 0.5rem;                                     /* ระยะห่างระหว่างโลโก้กับข้อความ */
+    font-weight: 600;                                /* ความหนาของฟอนต์ */
 }
 
-/* ตัวอักษร subtitle ของ brand เช่นข้อความเล็กใต้โลโก้ */
 .top-navbar .brand-text-small {
-    font-size: .8rem;
-    line-height: 1.1;
+    font-size: .8rem;                                /* ขนาดตัวอักษรเล็ก */
+    line-height: 1.1;                                /* ความสูงของบรรทัด */
+}
+/* ปรับขนาดและสีตัวหนังสือบนหน้า login */
+.form-subtitle {
+    font-size: 1.75rem;       /* ปรับขนาด */
+    font-weight: 700;        /* ปรับตัวหนา */
+    color: #ffffff !important; /* ปรับสี */
+    text-shadow: 0 1px 6px #ffffff(0,0,0,0.55); /* เงา */
+    text-align: center;      /* จัดกลาง */
 }
 
+.form-title {
+    font-size: 1.75rem;         /* ปรับขนาด*/
+    font-weight: 700;        /* ปรับตัวหนา */
+    color: #ffffff !important; /* ปรับสี */
+    text-shadow: 0 1px 7px #ffffff(0 95% 5%); /* เงา */
+    text-align: center;      /* จัดกลาง */
+}
 /* ------------------------------
    MAIN LOGIN CARD
 ------------------------------ */
-/* กล่อง Login หลักโปร่งขาวแบบกระจก + เลื่อนลงล่าง 250px */
 .login-card {
-    background: rgba(255,255,255,0.96);
-    border-radius: 24px;
-    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
-    backdrop-filter: blur(12px);
-    margin-top: 250px;
+    background: rgba(255,255,255,0.96);             /* พื้นหลังสีขาวโปร่งเล็กน้อย */
+    height: 480px;                                   /* ความสูงคงที่ 480px */
+    padding-top: 50px;                               /* เว้นบน 50px */
+    padding-bottom: 50px;                            /* เว้นล่าง 50px */
+    border-radius: 30px;                             /* ขอบมน 30px */
+    box-shadow: 0 18px 50px rgba(0,0,0,0.22);       /* เงาลึก */
+    backdrop-filter: blur(12px);                     /* ทำให้พื้นหลังเบลอ */
+    margin-top: 50px;                                /* เว้นด้านบนจาก element ก่อนหน้า */
+    display: flex;                                   /* ใช้ flex เพื่อจัด element ภายใน */
+    align-items: center;                             /* จัด element กลางแนวตั้ง */
+    justify-content: center;                         /* จัด element กลางแนวนอน */
+    flex-direction: column;                          /* วาง element เป็นแนวตั้ง */
 }
 
-/* หัวข้อ Login บนพื้นหลัง Hero */
 .login-card .form-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 1px 7px rgba(0,0,0,0.55);
+    font-size: 1.5rem;                               /* ขนาดตัวอักษรใหญ่ */
+    font-weight: 700;                                /* หนา */
+    color: #ffffff;                                  /* สีขาว */
+    text-shadow: 0 1px 7px rgba(0,0,0,0.55);        /* เงาใต้ตัวหนังสือ */
 }
 
-/* ข้อความรองหัวข้อ */
 .login-card .form-subtitle {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+    font-size: 1.1rem;                               /* ขนาดตัวอักษรรอง */
+    font-weight: 600;                                /* หนาปานกลาง */
+    color: #ffffff;                                  /* สีขาว */
+    text-shadow: 0 1px 6px rgba(0,0,0,0.55);        /* เงาเล็ก */
 }
 
-/* ด้านในของการ์ด (เป็นพื้นหลังขาวสนิท) */
+/* กล่องด้านใน ถูกใช้งานเฉพาะ HTML version ใหม่ */
 .login-card-inner {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 2rem 1.5rem;
+    background: #ffffff;                             /* พื้นหลังขาว */
+    border-radius: 20px;                             /* ขอบมน 20px */
+    padding: 2rem 1.5rem;                            /* เว้นด้านบน/ล่าง 2rem ซ้าย/ขวา 1.5rem */
 }
 
-/* ปุ่ม login ผ่านผู้ให้บริการ (Google, Line, CMU) */
+/* ปุ่ม login ผ่านผู้ให้บริการ */
 .provider-btn {
-    border-radius: 999px;
-    font-weight: 500;
-    border-width: 1.5px;
-    padding: .55rem 1rem;
+    border-radius: 999px;                            /* ขอบกลมแบบ pill */
+    font-weight: 500;                                /* ความหนาปานกลาง */
+    border-width: 1.5px;                             /* ความหนาขอบปุ่ม */
+    padding: .55rem 1rem;                            /* เว้นด้านบน/ล่าง 0.55rem ซ้าย/ขวา 1rem */
 }
 
-/* ปุ่ม Google */
 .btn-google {
-    border-color: #dadce0;
+    border-color: #dadce0;                           /* สีขอบสำหรับปุ่ม Google */
 }
+
 .btn-google i {
-    color: #db4437;
+    color: #db4437;                                  /* สีไอคอน Google */
 }
 
-/* ปุ่ม Line */
 .btn-line {
-    background-color: #06C755;
-    border-color: #06C755;
-    color: #ffffff;
+    background-color: #06C755;                       /* สีพื้น Line */
+    border-color: #06C755;                           /* สีขอบ Line */
+    color: #ffffff;                                  /* สีตัวอักษรขาว */
 }
 
-/* ปุ่ม CMU */
 .btn-cmu {
-    border-color: #6c2c7b;
+    border-color: #6c2c7b;                           /* สีขอบปุ่ม CMU */
 }
 
-/* ปุ่มสมัครสมาชิกแบบ Outline */
 .signup-outline {
-    border-radius: 999px;
-    padding: .6rem 1.25rem;
-    font-weight: 500;
+    border-radius: 999px;                            /* ขอบกลม */
+    padding: .6rem 1.25rem;                          /* padding ปุ่ม */
+    font-weight: 500;                                /* ความหนาปานกลาง */
 }
 
-/* เส้นแบ่งระหว่างปุ่ม login provider กับส่วนอื่น */
-.split-line {
-    border-left: 1px solid #e4e4e4;
+.vertical-split-line {
+    display: flex;
+    flex-direction: column;      /* จัดแนวตั้ง */
+    align-items: center;         /* กึ่งกลางแนวนอน */
+    gap: 0.5rem;                 /* ช่องว่างระหว่างเส้นกับข้อความ */
 }
 
-/* ปุ่มสีม่วงหลัก */
-.btn-primary-purple {
-    background-color: #6f3fa8;
-    border-color: #6f3fa8;
-    border-radius: 999px;
+.vertical-split-line .line {
+    width: 2px;                  /* ความหนาเส้น */
+    height: 130px;                /* ความสูงของเส้น */
+    background-color: #e4e4e4;   /* สีเส้น */
+}
+
+.vertical-split-line .text {
     font-weight: 600;
+    color: #b4b2b2;
 }
 
-/* Hover ของปุ่มสีม่วง */
-.btn-primary-purple:hover {
-    background-color: #5a308b;
-    border-color: #5a308b;
-}
 
-/* บังคับให้ตัวหนังสือเป็นสีขาว */
+/* CMU primary button */
 .btn-primary-purple {
-    color: #fff !important;
+    background-color: #6f3fa8;                       /* สีพื้นปุ่มหลัก */
+    border-color: #6f3fa8;                           /* สีขอบปุ่ม */
+    border-radius: 999px;                            /* ขอบกลม */
+    font-weight: 600;                                /* หนาปานกลาง */
+    color: #fff !important;                          /* สีตัวอักษรขาว */
 }
 
-/* ลิงก์ช่วยเหลือ เช่น ลืมรหัสผ่าน */
+.btn-primary-purple:hover {
+    background-color: #5a308b;                       /* สี hover */
+    border-color: #5a308b;                           /* สีขอบ hover */
+}
+
 .help-link {
-    font-size: .9rem;
+    font-size: .9rem;                                /* ขนาดตัวอักษรลิงก์ช่วยเหลือ */
 }
 
 /* ------------------------------
    FOOTER LOGIN PAGE
 ------------------------------ */
 .lifelong-footer {
-    font-size: .85rem;
-    color: #f8f9fa;
+    font-size: .85rem;                               /* ขนาดตัวอักษร footer */
+    color: #f8f9fa;                                  /* สีตัวอักษร */
 }
 
 .lifelong-footer a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff;                                  /* สีลิงก์ */
+    text-decoration: none;                            /* ลบเส้นใต้ */
 }
 
 .lifelong-footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline;                      /* เส้นใต้เมื่อ hover */
 }
 
 /* ------------------------------
@@ -165,35 +186,24 @@
 ------------------------------ */
 @media (max-width: 991.98px) {
 
-    /* ขยับตำแหน่งพื้นหลังให้เห็นภาพดีขึ้นบนจอมือถือ */
     .hero-wrapper {
-        background-position: center bottom;
+        background-position: center bottom;         /* ปรับตำแหน่งภาพให้เหมาะกับมือถือ */
     }
 
-    /* เอาเงาออก + ทำพื้นหลังโปร่งเพราะบนมือถือพื้นที่แคบ */
-    .login-card {
-        box-shadow: none;
-        border-radius: 0;
-        background: transparent;
-    }
-
-    /* ลด padding และปรับมุมโค้งในการ์ดด้านใน */
     .login-card-inner {
-        border-radius: 16px;
-        padding: 1.5rem 1.25rem;
+        border-radius: 16px;                         /* ขอบมนเล็กลง */
+        padding: 1.5rem 1.25rem;                     /* เว้น padding สำหรับมือถือ */
     }
 
-    /* เส้นแบ่งจากแนวตั้ง เปลี่ยนเป็นแนวนอนบนมือถือ */
     .split-line {
-        border-left: none;
-        border-top: 1px solid #e4e4e4;
-        margin-top: 1rem;
-        padding-top: 1.5rem;
+        border-left: none;                            /* ลบเส้นแนวตั้ง */
+        border-top: 1px solid #e4e4e4;              /* เส้นแนวนอนแทน */
+        margin-top: 1rem;                             /* เว้นด้านบน */
+        padding-top: 1.5rem;                          /* padding บน */
     }
 
-    /* จัดตัวหนังสือส่วนหัวให้กึ่งกลาง */
     .desktop-title-area {
-        text-align: center;
-        margin-bottom: 1rem;
+        text-align: center;                           /* จัดกลางข้อความ */
+        margin-bottom: 1rem;                          /* เว้นล่าง */
     }
 }
