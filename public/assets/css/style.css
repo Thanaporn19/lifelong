@@ -1,51 +1,88 @@
+/* ===================================================
+   GLOBAL STYLES (เพิ่มคอมเมนต์อธิบายแต่ละส่วน)
+=================================================== */
 /* ------------------------------
-   HEADER – Transparent → Solid 
+   GLOBAL STYLES
+   คำอธิบายรวม: ตั้งค่าฟอนต์ และโครงสร้าง header/footer ทั้งหมดของเว็บ
+=================================================== */
+
+/* ------------------------------
+   FONT – ตั้งค่าฟอนต์หลักทั่วทั้งเว็บไซต์
 ------------------------------ */
-/* ขนาดโลโก้ใน Navbar เท่านั้น */
+/* ------------------------------
+   FONT VARIABLE ตั้งค่าฟอนต์หลักของเว็บ
+------------------------------ */
+:root {
+  /* กำหนดฟอนต์หลักให้เป็น Prompt และมี fallback เป็น system-ui */
+  --bs-font-sans-serif: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ใช้ฟอนต์ Prompt กับทุก element ในหน้า */
+body, html, * {
+  /* บังคับให้ทุก element ใช้ฟอนต์ Prompt */
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* บังคับให้ Navbar, ปุ่ม, heading และข้อความใช้ฟอนต์เดียวกัน */
+.navbar, .navbar-brand, .btn, h1, h2, h3, h4, h5, h6, p, span, li, a {
+  /* ย้ำฟอนต์อีกชั้นสำหรับ element สำคัญ ๆ */
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ------------------------------
+   HEADER – Transparent → Solid (เอฟเฟกต์สลับโปร่งใส → สีขาวเมื่อเลื่อนลง)
+------------------------------ */
+/* ------------------------------
+   สร้างเอฟเฟกต์ Navbar โปร่งใส (ตอนอยู่บน Hero) → เปลี่ยนเป็นสีขาวเมื่อเลื่อนลง
+------------------------------ */
+/* ขนาดโลโก้ตอนปกติและตอน header ติดบนสุด */
 .logo-navbar {
-    width: 250px;
-    height: auto;
+  width: 250px;   /* ขนาดโลโก้ตอนปกติ */
+  height: auto;
 }
 
-/* ถ้าตอนเลื่อนอยากให้เล็กลงหรือใหญ่ขึ้น */
 .site-header.scrolled .logo-navbar {
-    width: 250px;
+  width: 250px;   /* ยังใช้ขนาดเดิมเมื่อ scroll */
 }
 
-/* Header ตอนเริ่มต้น */
+/* Header หลัก ครอบ navbar */
 .site-header {
-  width: 100%;
-  transition: 0.35s ease;
-  z-index: 1000;
+  width: 100%;           /* ขยายเต็มความกว้างหน้าจอ */
+  transition: 0.35s ease; /* เอฟเฟกต์ transition เวลาเปลี่ยนสถานะ */
+  z-index: 1000;          /* ให้อยู่เหนือส่วนอื่น */
 }
 
-/* Header ปกติโปร่งใส */
+/* Navbar โปร่งใสตอนเริ่มต้น */
+/* Navbar โปร่งใสตอนเริ่มต้น */
 .main-navbar {
   background: transparent !important;
   transition: 0.35s ease;
 }
 
-/* Header ตอนเลื่อนลง */
+/* เมื่อ scroll ลง ให้ Navbar เปลี่ยนเป็นสีขาว + shadow */
+/* เมื่อเลื่อนลง: navbar จะมีพื้นหลังขาวและเงา */
 .site-header.scrolled .main-navbar {
   background: #ffffff !important;
   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
-/* ปุ่มเข้าสู่ระบบ – ปกติ */
+/* ปุ่ม Login แบบไม่มีพื้นหลัง (ไว้บน navbar โปร่งใส) */
+/* ปุ่ม Login โปร่งใส ตอนอยู่บนพื้นหลัง hero */
 .btn-login {
   color: white !important;
   background-color: transparent !important;
   border: none !important;
   padding: 0 !important;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* เปลี่ยนสีตอน scroll */
 }
 
-/* ปุ่มเข้าสู่ระบบ – เลื่อนลง */
+/* เมื่อ scroll → ให้ปุ่ม Login เปลี่ยนเป็นสีดำ */
 .site-header.scrolled .btn-login {
   color: #000 !important;
 }
 
-/* ปุ่มสมัครสมาชิก */
+/* ปุ่ม Register สีส้ม */
+/* ปุ่ม Register สีส้ม */
 .btn-register {
   background: #ff8a00;
   color: #fff !important;
@@ -53,127 +90,65 @@
   transition: background 0.3s ease;
 }
 
-/* ปุ่มสมัครสมาชิก – เลื่อนลง (เหมือนเดิม) */
+/* ตอน scroll ปุ่ม Register ยังเป็นสีเดิม */
 .site-header.scrolled .btn-register {
   background: #ff8a00 !important;
   color: #fff !important;
 }
 
-/* โลโก้ย่อเมื่อเลื่อน */
+/* โลโก้ตอน scroll จะย่อให้ดูไม่กินพื้นที่ */
+/* เมื่อเลื่อนลง โลโก้จะย่อขนาดเล็กลงเล็กน้อย */
 .site-header.scrolled .logo-img {
   transform: scale(0.88);
   transition: 0.35s ease;
 }
 
-/* ------------------------------ HERO ------------------------------ */
-.hero-section {
-  position: relative;
-  min-height: 580px;
-  overflow: hidden;
+/* ------------------------------
+   FOOTER (พื้นหลังแบบมีภาพ + ชั้นมืดซ้อน)
+------------------------------ */ – สไตล์พื้นหลังและไอคอน
+------------------------------ */
+/* พื้นหลัง footer (รูป + สีดำ) */
+.site-footer {
+  /* ใส่ภาพพื้นหลังฟุตเตอร์ + สีดำซ้อน */
+  background: url('assets/img/footer-bg.svg') center/cover no-repeat, #000;
 }
 
-/* รูปพื้นหลังอยู่ข้างหลังสุด */
-.hero-bg {
-  position: absolute;
-  inset: 0;
+.site-footer::before {
+  /* ชั้น overlay สีดำโปร่งบนพื้นหลัง */
+  background: rgba(0,0,0,0.75);
+}
+
+.site-footer a {
+  /* ลบเส้นใต้ลิงก์ใน footer */
+  text-decoration: none !important;
+}
+
+/* เส้นแบ่ง © ด้านล่างสุด */
+/* เส้นแบ่งด้านล่าง footer */
+.footer-copy-line {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  border-top: 1px solid #655f5f;
+  padding-top: 50px;
+  margin-top: 60px;
 }
 
-/* overlay อยู่ชั้นกลาง */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-/* เนื้อหาต้องอยู่หน้าสุด */
-.hero-container {
-  position: relative;
-  z-index: 3;
-}
-
-.scroll-board .card {
-  min-width: 200px;          /* ความกว้างกล่อง */
-  height: 250px;             /* ความสูงกล่อง */
-  scroll-snap-align: start;  /* snap เริ่มต้นแต่ละกล่อง */
-  flex-shrink: 1;            /* ย่อขนาด */
-  border-radius: 12px;       /* ขอบมน */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* เงาเล็ก ๆ น่ารัก */
-  padding: 20px;             /* ระยะห่างภายในกล่อง */
-  transition: transform 0.2s ease; /* animation เล็ก ๆ เวลาหยุด hover */
-}
-
-.scroll-board .card:hover {
-  transform: translateY(-5px); /* effect เล็ก ๆ เวลาชี้เมาส์ */
-}
-
-.cta-bar .container {
-    position: relative;
-    z-index: 2;
-}
+/* ------------------------------
+   SOCIAL ICONS – ไอคอนกลมใน footer
+------------------------------ */
+/* ไอคอน social media (กลม สีเทาเข้ม hover ได้) */
 .social-icon {
-  display: inline-flex;
+  display: inline-flex;     /* จัดให้อยู่กลางแนวตั้ง/นอน */
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #343131; /* วงกลมสีเทา */
-  border-radius: 50%;
-  margin-right: 12px; /* ระยะห่างระหว่างไอคอน */
+  background-color: #343131; /* พื้นหลังสีเทาเข้ม */
+  border-radius: 50%;        /* ทำให้เป็นวงกลม */
+  margin-right: 12px;
   text-decoration: none;
 }
 
 .social-icon i {
-  color: #ffffff; /* ไอคอนสีขาว */
+  color: #ffffff;            /* ไอคอนสีขาว */
   font-size: 20px;
 }
-
-/* ------------------------------ 
-   FOOTER
------------------------------- */
-.site-footer {
-  background: url('assets/img/footer-bg.svg') center/cover no-repeat,
-              #000; /* สีดำรอง */
-}
-.site-footer::before {
-  background: rgba(0,0,0,0.75);
-}
-
-/* ลบเส้นใต้ลิงก์ทั้งหมดใน footer */
-.site-footer a {
-  text-decoration: none !important;
-}
-
-.footer-copy-line {
-  width: 100%;            /* ปรับความยาวตามต้องการ 50–100% */
-  border-top: 1px solid #655f5f; /* ขนาดเส้น + สี */
-  padding-top: 50px; /* เว้นระยะจากเส้น */
-  margin-top: 60px;  /* ห่างจากเมนูด้านบน */
-}
-
-/* ------------------------------
-   ใช้ฟอนต์ Prompt ทั้งเว็บ
------------------------------- */
-:root {
-  --bs-font-sans-serif: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-}
-
-/* บังคับให้ทุก element ใช้ Prompt */
-body, html, * {
-  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-}
-
-/* สำหรับปุ่มและ navbar ที่ Bootstrap กำหนด font-family เอง */
-.navbar, .navbar-brand, .btn, h1, h2, h3, h4, h5, h6, p, span, li, a {
-  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-}
-
-
-
-
-
-
-
