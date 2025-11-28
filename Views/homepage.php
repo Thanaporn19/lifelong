@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
   <!-- base URL ของเว็บไซต์ ใช้สำหรับกำหนด path ให้ชัดเจน -->
@@ -24,8 +24,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- โหลดไฟล์ CSS ภายในโปรเจค -->
-  <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/homepage.css'); ?>">
+  <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
+  
 
 </head>
 
@@ -48,10 +49,10 @@
         </button>
 
         <!-- เมนูด้านขวา -->
-        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-          <ul class="navbar-nav align-items-center">
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-center">
 
-            <!-- ปุ่มเข้าสู่ระบบ -->
+             <!-- ปุ่มเข้าสู่ระบบ -->
             <li class="nav-item ms-3">
               <a class="btn btn-outline-light btn-login" href="#">เข้าสู่ระบบ</a>
             </li>
@@ -60,7 +61,6 @@
             <li class="nav-item ms-2">
               <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>">สมัครสมาชิก</a>
             </li>
-
           </ul>
         </div>
 
@@ -128,15 +128,15 @@
 
         <!-- คอลัมน์ขวา: กล่องฟีเจอร์แบบเลื่อน -->
         <div class="col-lg-8">
-          <div class="scroll-board-wrapper position-relative">
+            <div class="scroll-board-wrapper position-relative">
 
-            <!-- พื้นหลังวงกลมตกแต่ง -->
-            <div class="bg-circle"></div>
+        <!-- วงกลมพื้นหลัง -->
+          <div class="bg-circle"></div>
 
-            <!-- กล่องเลื่อนแนวนอน -->
-            <div class="scroll-board d-flex gap-3 overflow-auto py-2">
+        <!-- กรอบเลื่อนแนวนอน -->
+          <div class="scroll-board d-flex gap-3 overflow-auto py-2">
 
-              <!-- CARD 1 -->
+            <!-- CARD 1 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle orange">
                   <i class="bi bi-easel-fill"></i>
@@ -147,7 +147,7 @@
                 </p>
               </div>
 
-              <!-- CARD 2 -->
+            <!-- CARD 2 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle purple">
                   <i class="bi bi-briefcase-fill"></i>
@@ -158,7 +158,7 @@
                 </p>
               </div>
 
-              <!-- CARD 3 -->
+            <!-- CARD 3 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle green">
                   <i class="bi bi-mortarboard-fill"></i>
@@ -176,7 +176,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- =========================== CONTENT SECTION 1 =========================== -->
   <section class="py-5 bg-light">
@@ -293,11 +292,12 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <!-- ข้อความ CTA -->
-      <div class="d-flex align-items-center">
-        <div>
-          <h4 class="mb-0">เริ่มต้นใช้งานระบบไปกับเรา</h4>
-        </div>
-      </div>
+<div class="title-wrapper d-flex align-items-center gap-3">
+    <div class="icon-circle orange">
+        <i class="bi bi-send"></i>
+    </div>
+    <h4 class="mb-0 text-white">เริ่มต้นใช้งานระบบไปกับเรา</h4>
+</div>
 
       <!-- ปุ่ม CTA -->
       <a class="btn btn-orange btn-register" href="#"> เริ่มเข้าสู่ระบบ → </a>
@@ -308,45 +308,52 @@
 
 
   <!-- =========================== FOOTER =========================== -->
-  <footer class="site-footer">
-    <div class="container py-5">
-      <div class="row">
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row">
 
-        <!-- โลโก้ + โซเชียล -->
-        <div class="col-md-4">
-          <img src="<?= base_url('assets/img/logo-footer.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
+      <!-- โลโก้ท้าย + โซเชียล -->
+      <div class="col-md-4">
+        <img src="<?= base_url('assets/img/logo-footer.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
 
-          <!-- ไอคอนโซเชียล -->
-          <div class="mb-3">
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-line"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-          </div>
+        <!-- ไอคอนโซเชียล -->
+        <div class="mb-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-line"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
         </div>
-
-
-        <!-- ลิงก์เมนูด้านขวา -->
-        <div class="col-md-8">
-          <ul class="list-inline text-md-end mt-3 mt-md-0">
-            <li class="list-inline-item me-3"><a class="text-white" href="#">หน้าหลัก</a></li>
-            <li class="list-inline-item me-3"><a class="text-white" href="#">Dashboard</a></li>
-            <li class="list-inline-item me-3"><a class="text-white" href="#">การเรียนรู้</a></li>
-            <li class="list-inline-item me-3"><a class="text-white" href="#">ระบบประเมิน</a></li>
-            <li class="list-inline-item me-3"><a class="text-white" href="#">ติดต่อเรา</a></li>
-            <li class="list-inline-item me-3"><a class="text-white" href="#">สำหรับผู้ดูแลระบบ</a></li>
-          </ul>
-
-          <!-- ข้อความลิขสิทธิ์ -->
-          <p class="footer-copy footer-copy-line text-muted small mt-3">
-            <a class="text-white" href="#">
-              © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
-            </a>
-          </p>
-        </div>
-
       </div>
+
+      <!-- ลิงก์เมนูด้านขวา -->
+      <div class="col-md-8">
+        <ul class="list-inline text-md-end mt-3 mt-md-0">
+          <li class="list-inline-item me-3"><a class="text-white" href="#">หน้าหลัก</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">Dashboard</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">การเรียนรู้</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">ระบบประเมิน</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">ติดต่อเรา</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">สำหรับผู้ดูแลระบบ</a></li>
+        </ul>
+      </div>
+
+      <!-- เส้นคั่นเต็มความกว้าง -->
+      <div class="col-12">
+        <hr style="border: 1px solid white !important;">
+      </div>
+
+      <!-- ข้อความลิขสิทธิ์ -->
+      <div class="col-12 text-center">
+        <p class="footer-copy text-muted small mt-3">
+          <a class="text-white" href="#">
+            © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
+          </a>
+        </p>
+      </div>
+
     </div>
-  </footer>
+  </div>
+</footer>
+
 
 
   <!-- =========================== JS Scripts =========================== -->
