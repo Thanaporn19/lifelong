@@ -49,7 +49,7 @@
 
 /* ปุ่มสมัครสมาชิก – ปกติ */
 .btn-register {
-  background: #ff8a00;          /* สีส้ม */
+  background: #f08101;          /* สีส้ม */
   color: #fff !important;       /* ข้อความสีขาว */
   border: none;                 /* ไม่มีเส้นขอบ */
   transition: background 0.3s ease; /* ลื่นไหลเวลาเปลี่ยนสี */
@@ -69,14 +69,14 @@
 
     /* สไตล์ปุ่มสีส้ม */
     .btn-orange {
-      background-color: #c64671;
+      background-color: #f08101;
       color: #fff !important;
       border: none;
       border-radius: 999px;
       font-weight: 600;
     }
     .btn-orange:hover {
-      background-color: #e07800;
+      background-color: #f08101;
       color: #fff !important;
     }
 
@@ -127,7 +127,7 @@
 /* กล่อง card ใน Scroll Board */
 .scroll-board .card {
   min-width: 200px;        /* ความกว้างกล่อง */
-  height: 250px;           /* ความสูงกล่อง */
+  height: 300px;           /* ความสูงกล่อง */
   scroll-snap-align: start;/* ให้ snap เมื่อหยุดเลื่อน */
   flex-shrink: 1;          /* กล่องย่อได้ */
   border-radius: 12px;     /* ขอบมน */
@@ -141,11 +141,88 @@
   transform: translateY(-5px);
 }
 
+/* ===============================
+   วงกลมพื้นหลัง Scroll Board (แนวนอน)
+================================ */
+.scroll-board-wrapper {
+  position: relative;
+  padding: 50px 0;           /* ขยายพื้นที่ด้านบน-ล่าง */
+  overflow: visible !important;  /* ไม่ให้ตัดวงกลม */
+}
+
+/* วงกลมใส่ไอคอน */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #007bff; /* default (ถ้ามีสีเฉพาะก็จะ override) */
+  font-size: 32px;
+  color: white;
+
+  margin: 0 auto 10px auto; /* ให้วงกลมอยู่กลางการ์ด */
+}
+
+/* สีเพิ่มเติมของวงกลม */
+.icon-circle.green {
+  background-color: #28a745;
+}
+
+.icon-circle.blue {
+  background-color: #007bff;
+}
+
+.icon-circle.orange {
+  background-color: #fd7e14;
+}
+
+/* จัดการไอคอนให้แสดงตรงกลางอย่างสมบูรณ์ */
+.icon-circle i {
+  line-height: 1;
+  display: inline-block;
+}
+
+.bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+
+  width: 400px;
+  height: 400px;
+
+  background: #6e37d5;
+  opacity: 0.6;
+  border-radius: 50%;
+  filter: blur(0.5px);
+
+  z-index: 2;           /* อยู่หลัง card แต่หน้าพื้นหลัง */
+  pointer-events: none;
+}
+
+/* ให้การ์ดลอยเหนือวงกลม */
+.scroll-board .card {
+  position: relative;
+  z-index: 3;
+}
+
+
 /* ------------------------------ CTA BAR ------------------------------ */
 
 .cta-bar .container {
     position: relative; /* เพื่อวาง content บน overlay ได้ */
     z-index: 2;
+}
+
+.feature-icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;  /* บรรทัดนี้ทำให้กึ่งกลาง */
+  display: block;            /* ต้องมี เพื่อ margin auto ทำงาน */
 }
 
 /* ------------------------------ SOCIAL ICONS ------------------------------ */
@@ -189,10 +266,4 @@
   text-decoration: none !important;
 }
 
-/* เส้นคั่นด้านล่างสุด (copyright line) */
-.footer-copy-line {
-  width: 100%;                     /* ความยาวเส้น */
-  border-top: 1px solid #655f5f;   /* สีเส้น + ความหนา */
-  padding-top: 50px;               /* เว้นบนจากเส้น */
-  margin-top: 60px;                /* ระยะห่างจากเมนูบน */
-}
+
