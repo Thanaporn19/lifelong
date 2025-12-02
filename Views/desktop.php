@@ -5,10 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>วิทยาลัยการศึกษาตลอดชีวิต</title>
 
-  <link rel="icon" type="image/svg" href="<?= base_url('assets/img/logo_lifelong11.png') ?>">
+  <link rel="icon" type="image/png" href="<?= base_url('assets/img/logo_lifelong11.png') ?>"> <!-- ไอคอนบนแท็บ -->
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- โหลดฟอนต์ Prompt จาก Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+  <!-- Bootstrap 5 CSS สำหรับ UI -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- jQuery 3 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <!-- โหลดไฟล์ CSS ภายในโปรเจค -->
   <link rel="stylesheet" href="<?= base_url('assets/css/desktop.css'); ?>">
@@ -29,63 +38,77 @@
  </script>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-prompt py-2">
-  <div class="container-fluid px-4">
+<header class="shadow-sm">
 
-    <div class="d-flex align-items-center">
-      <img src="assets/img/logo.svg" height="32" class="me-2">
-    </div>
+  <!-- ==== ชั้นที่ 1 : TOP BAR ==== -->
+  <div class="topbar d-flex justify-content-between align-items-center px-4 py-2">
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav mx-auto gap-3">
-        <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-grid-fill menu-icon"></i>หน้าหลัก</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-mortarboard-fill menu-icon"></i> การเรียนรู้ </a>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item">หน้ารวมการเรียนรู้</a></li>
-                <li><a class="dropdown-item">การเรียนรู้อปท.</a></li>
-              </ul>
-            </li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-journal-text menu-icon"></i>จัดการโครงการ</a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-folder2-open menu-icon"></i>กิจกรรม</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-clipboard2-check menu-icon"></i> ระบบประเมิน </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item">ระบบประเมินผู้เรียน</a></li>
-            <li><a class="dropdown-item">ระบบประเมินวิทยากร</a></li>
-            <li><a class="dropdown-item">ระบบประเมินชุมชน</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pie-chart-fill menu-icon"></i>ผลการดำเนินงาน</a></li>
-      </ul>
-
-      <div class="d-flex align-items-center gap-3">
-
-        <div class="position-relative">
-          <i class="bi bi-bell fs-4"></i>
-          <span class="badge bg-danger rounded-circle position-absolute" style="top:-4px; right:-4px;">4</span>
-        </div>
-
-        <div class="dropdown">
-          <a class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" href="#">
-            <img src="assets/img/pro.svg" class="rounded-circle me-2" width="36">
-            <span class="fw-semibold">ทศพล ศรีนุญ</span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">โปรไฟล์</a></li>
-          </ul>
-        </div>
+      <!-- โลโก้ -->
+      <div class="d-flex align-items-center">
+          <img src="assets/img/logo.svg" height="34" class="me-2">
       </div>
 
-    </div>
+      <!-- ไอคอน + โปรไฟล์ -->
+      <div class="d-flex align-items-center gap-4">
+
+          <!-- Notification -->
+          <div class="position-relative">
+              <i class="bi bi-bell fs-4"></i>
+              <span class="badge bg-danger rounded-circle position-absolute" style="top:-4px; right:-4px;">4</span>
+          </div>
+
+          <!-- Profile -->
+          <div class="dropdown">
+              <a class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="assets/img/pro.svg" class="rounded-circle me-2" width="38">
+                <span class="fw-semibold text-dark">ทศพล ศรีนุญ</span>
+              </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">โปรไฟล์</a></li>
+            </ul>
+          </div>
+      </div>
   </div>
-</nav>
+
+  <!-- ==== ชั้นที่ 2 : MENU BAR ==== -->
+  <nav class="menubar border-top">
+      <ul class="nav justify-content-center py-2 gap-3">
+
+          <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="bi bi-grid-fill menu-icon"></i> หน้าหลัก</a>
+          </li>
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-mortarboard-fill menu-icon"></i> การเรียนรู้
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">หน้ารวมการเรียนรู้</a></li>
+                  <li><a class="dropdown-item">การเรียนรู้อปท.</a></li>
+              </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-journal-text menu-icon"></i> จัดการโครงการ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-folder2-open menu-icon"></i> กิจกรรม</a></li>
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                  <i class="bi bi-clipboard2-check menu-icon"></i> ระบบประเมิน
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">ระบบประเมินผู้เรียน</a></li>
+                  <li><a class="dropdown-item">ระบบประเมินวิทยากร</a></li>
+                  <li><a class="dropdown-item">ระบบประเมินชุมชน</a></li>
+              </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pie-chart-fill menu-icon"></i> ผลการดำเนินงาน</a></li>
+
+      </ul>
+  </nav>
+
+</header>
+
 
 <!-- CONTENT -->
 <div class="container-fluid px-4 mt-4">
@@ -94,8 +117,8 @@
   <p class="text-muted">ยินดีต้อนรับเข้าสู่ระบบ ProMPT การจัดการเรียนรู้ครบวงจร</p>
 
   <div class="mb-4">
-    <button class="btn btn-outline-secondary me-2">Manage view</button>
-    <button class="btn btn-success">Learner view</button>
+    <button class="btn btn-success">Manage view</button>
+    <button class="btn btn-outline-secondary me-2">Learner view</button>
   </div>
 
   <div class="col-12">
