@@ -19,14 +19,22 @@
     <!-- jQuery 3 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Custom CSS หลักของเว็บ -->
-    <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
-
     <!-- CSS login แบบแยกไฟล์ -->
     <link rel="stylesheet" href="<?= base_url('assets/css/login.css'); ?>">
 
+    <!-- Custom CSS หลักของเว็บ -->
+    <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
+
 </head>
 <body>
+
+<style>
+.hero-wrapper {
+    background-image: url('<?= base_url("assets/img/bg-login.svg") ?>');
+    background-size: cover;
+    background-position: center;
+}
+</style>
 
 <!-- พื้นหลังหลัก -->
 <div class="hero-wrapper">
@@ -105,14 +113,14 @@
 
                                 <div class="d-grid gap-2">
 
-                                    <!-- Google -->
-                                    <button type="button" class="btn btn-light provider-btn">
+                                    <!-- Google--> 
+                                    <button type="button" class="provider-btn btn-google">
                                         <img src="<?= base_url('assets/img/logo-google.svg'); ?>" class="img-fluid me-2" style="width: 20px; height: 20px;">
                                         ลงชื่อเข้าใช้ด้วย Google
                                     </button>
 
                                     <!-- Line -->
-                                    <button type="button" class="btn provider-btn btn-line">
+                                    <button type="button" class="provider-btn btn-line">
                                         <img src="<?= base_url('assets/img/icon-line.svg'); ?>" class="img-fluid me-2" style="width: 20px; height: 20px;">
                                         ลงชื่อเข้าใช้ด้วย Line
                                     </button>
@@ -153,8 +161,6 @@
 
                                     <!-- Username -->
                                     <div class="mb-3">
-                                        <label class="form-label small">บัญชีผู้ใช้</label>
-
                                         <div class="input-group">
                                             <span class="input-group-text"><i class="bi bi-person"></i></span>
                                             <input type="text" class="form-control" placeholder="บัญชีผู้ใช้">
@@ -166,7 +172,6 @@
 
                                     <!-- Password -->
                                     <div class="mb-3">
-                                        <label class="form-label small">รหัสผ่าน</label>
                                         <div class="input-group">
                                             <span class="input-group-text"><i class="bi bi-lock"></i></span>
                                             <input type="password" class="form-control" placeholder="รหัสผ่าน">
@@ -175,8 +180,9 @@
 
                                     <!-- Submit -->
                                     <div class="d-grid mb-2">
-                                        <button type="submit" class="btn btn-primary-purple">เข้าสู่ระบบ</button>
+                                        <a href="<?= base_url('desktop'); ?>" class="btn btn-primary-purple">เข้าสู่ระบบ</a>
                                     </div>
+
 
                                     <!-- Help -->
                                     <div class="text-center mt-2">
@@ -211,7 +217,7 @@
 
                 <!-- Copyright -->
                 <div class="mt-1">
-                    © School of Lifelong Education, CMU. All Rights Reserved
+                    © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
                 </div>
 
             </div>
