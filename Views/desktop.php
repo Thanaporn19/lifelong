@@ -5,70 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>วิทยาลัยการศึกษาตลอดชีวิต</title>
 
-  <link rel="icon" type="image/png" href="<?= base_url('assets/img/logo_lifelong11.png') ?>">
+  <link rel="icon" type="image/svg" href="<?= base_url('assets/img/logo_lifelong11.png') ?>">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
 
+  <!-- โหลดไฟล์ CSS ภายในโปรเจค -->
+  <link rel="stylesheet" href="<?= base_url('assets/css/desktop.css'); ?>">
+  
   <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
 
-  <style>
-
-  .navbar-prompt { background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.08); }
-  .menu-icon { font-size:20px; margin-right:6px; }
-
-  .card-prompt { border-radius:20px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
-  .card-prompt img { width:100%; height:160px; object-fit:cover; }
-  .card-prompt-number { position:absolute; bottom:12px; left:12px; font-size:32px; font-weight:700; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,0.4);}
-
-  /* ปฏิทิน */
-  .calendar-box { background:#fff; padding:24px; border-radius:24px; box-shadow:0 3px 10px rgba(0,0,0,0.08); }
-
-  #calendar-body td { 
-    height:42px; 
-    cursor:pointer; 
-    vertical-align:middle; 
-    position: relative;
-  }
-
-  #calendar-body td:hover {
-    background:#eee; 
-    border-radius:50%;
-  }
-
-  /* วันที่เป็นวันนี้ */
-  .today { 
-    background:#1abc9c !important; 
-    color:#fff !important; 
-    border-radius:50%; 
-    font-weight:bold;
-    width:40px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:auto;
-  }
-
-  /* Loading screen */
-  #loading-screen { 
-    position: fixed; 
-    top:0; left:0; 
-    width:100%; height:100%; 
-    background:#fff; 
-    display:flex; 
-    align-items:center; 
-    justify-content:center; 
-    z-index:9999; 
-  }
-
-</style>
 </head>
 <body>
 
 <!-- Loading Screen -->
 <div id="loading-screen"><div class="spinner-border"></div></div>
-<script> window.addEventListener("load", () => document.getElementById("loading-screen").style.display = "none"); </script>
+<script> document.addEventListener("DOMContentLoaded", () => {
+         document.getElementById("loading-screen").style.opacity = 0;
+          setTimeout(() => {
+         document.getElementById("loading-screen").style.display = "none";
+  }, 200);
+});
+ </script>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-prompt py-2">
@@ -85,19 +43,25 @@
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav mx-auto gap-3">
         <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-grid-fill menu-icon"></i>หน้าหลัก</a></li>
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-mortarboard-fill menu-icon"></i> การเรียนรู้
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">หน้ารวมการเรียนรู้</a></li>
-          </ul>
-        </li>
-
+            <i class="bi bi-mortarboard-fill menu-icon"></i> การเรียนรู้ </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item">หน้ารวมการเรียนรู้</a></li>
+                <li><a class="dropdown-item">การเรียนรู้อปท.</a></li>
+              </ul>
+            </li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-journal-text menu-icon"></i>จัดการโครงการ</a></li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-folder2-open menu-icon"></i>กิจกรรม</a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-clipboard2-check menu-icon"></i>ระบบประเมิน</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-clipboard2-check menu-icon"></i> ระบบประเมิน </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item">ระบบประเมินผู้เรียน</a></li>
+            <li><a class="dropdown-item">ระบบประเมินวิทยากร</a></li>
+            <li><a class="dropdown-item">ระบบประเมินชุมชน</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pie-chart-fill menu-icon"></i>ผลการดำเนินงาน</a></li>
       </ul>
 
@@ -110,7 +74,7 @@
 
         <div class="dropdown">
           <a class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" href="#">
-            <img src="assets/user.jpg" class="rounded-circle me-2" width="36">
+            <img src="assets/img/pro.svg" class="rounded-circle me-2" width="36">
             <span class="fw-semibold">ทศพล ศรีนุญ</span>
           </a>
           <ul class="dropdown-menu">
@@ -134,16 +98,20 @@
     <button class="btn btn-success">Learner view</button>
   </div>
 
+  <div class="col-12">
+        <hr style="border: 1px solid gray !important;">
+      </div>
+
   <div class="row g-4">
 
     <!-- การ์ดด้านซ้าย -->
     <div class="col-lg-9">
       <div class="row g-4">
 
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-desktop1.svg"><div class="card-prompt-number">12</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-desktop2.svg"><div class="card-prompt-number">6</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-desktop3.svg"><div class="card-prompt-number">124</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-desktop4.svg"><div class="card-prompt-number">321</div></div></div>
+        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt1.png"><div class="card-prompt-number">12</div></div></div>
+        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt2.png"><div class="card-prompt-number">6</div></div></div>
+        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt3.png"><div class="card-prompt-number">124</div></div></div>
+        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt4.png"><div class="card-prompt-number">321</div></div></div>
 
       </div>
     </div>
@@ -176,6 +144,52 @@
 
   </div>
 </div>
+ <!-- =========================== FOOTER =========================== -->
+<footer class="site-footer">
+  <div class="container py-5">
+    <div class="row">
+
+      <!-- โลโก้ท้าย + โซเชียล -->
+      <div class="col-md-4">
+        <img src="<?= base_url('assets/img/logo-footer.svg'); ?>" alt="ProMPT" class="me-2 logo-img">
+
+        <!-- ไอคอนโซเชียล -->
+        <div class="mb-3">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-line"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- ลิงก์เมนูด้านขวา -->
+      <div class="col-md-8">
+        <ul class="list-inline text-md-end mt-3 mt-md-0">
+          <li class="list-inline-item me-3"><a class="text-white" href="#">หน้าหลัก</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">Dashboard</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">การเรียนรู้</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">ระบบประเมิน</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">ติดต่อเรา</a></li>
+          <li class="list-inline-item me-3"><a class="text-white" href="#">สำหรับผู้ดูแลระบบ</a></li>
+        </ul>
+      </div>
+
+      <!-- เส้นคั่นเต็มความกว้าง -->
+      <div class="col-12">
+        <hr style="border: 1px solid white !important;">
+      </div>
+
+      <!-- ข้อความลิขสิทธิ์ -->
+      <div class="col-12 text-center">
+        <p class="footer-copy text-muted small mt-3">
+          <a class="text-white" href="#">
+            © Copyright School of Lifelong Education, Chiang Mai University. All Rights Reserved
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</footer>
 
 <!-- SCRIPT ปฏิทิน -->
 <script>
