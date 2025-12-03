@@ -25,6 +25,7 @@
 
   <!-- โหลดไฟล์ CSS ภายในโปรเจค -->
   <link rel="stylesheet" href="<?= base_url('assets/css/homepage.css'); ?>">
+  
   <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
   
 
@@ -70,34 +71,41 @@
 
 
   <!-- =========================== HERO SECTION =========================== -->
-  <section class="hero-section">
+<section class="hero-section">
 
-    <!-- พื้นหลัง hero -->
-    <img src="<?= base_url('assets/img/hero-bg.svg'); ?>" class="hero-bg">
+  <!-- พื้นหลัง hero -->
+  <img src="<?= base_url('assets/img/hero-bg.svg'); ?>" class="hero-bg">
 
-    <!-- เลเยอร์ทับสำหรับใส่เอฟเฟกต์มืด/สว่าง -->
-    <div class="hero-overlay"></div>
+  <!-- เลเยอร์ทับสำหรับใส่เอฟเฟกต์มืด -->
+  <div class="hero-overlay"></div>
 
-    <!-- เนื้อหา hero -->
-    <div class="container hero-container d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
-      <div class="row w-100">
-        <div class="col-lg-7 mx-auto">
+  <!-- เนื้อหา hero -->
+  <div class="container hero-container d-flex justify-content-center align-items-center text-center" style="height: 100vh;">
 
-          <!-- หัวข้อหลัก -->
-          <h1 class="hero-title text-white">
-            จัดการโครงการ พัฒนาหลักสูตร<br>ต่อยอดกิจกรรม แบบครบวงจร
+    <div class="row w-100">
+      <div class="col-lg-7 mx-auto">
+
+        <!-- หัวข้อหลัก + ปุ่ม -->
+        <div class="hero-content text-white">
+
+          <h1 class="hero-title">
+            <strong>จัดการโครงการ</strong> พัฒนาหลักสูตร<br>
+            ต่อยอดกิจกรรม <strong>แบบครบวงจร</strong>
           </h1>
 
-          <!-- ปุ่ม CTA -->
-          <div class="mt-4">
-            <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>"> เริ่มต้นใช้งาน → </a>
+          <!-- ปุ่ม CTA ติดกับข้อความ -->
+          <div class="mt-4 hero-btn-wrapper">
+            <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>">เริ่มต้นใช้งาน →</a>
           </div>
 
         </div>
+
       </div>
     </div>
 
-  </section>
+  </div>
+</section>
+
 
 
   <!-- =========================== FEATURE CARDS =========================== -->
@@ -149,7 +157,7 @@
 
             <!-- CARD 2 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
-                <div class="icon-circle purple">
+                <div class="icon-circle blue">
                   <i class="bi bi-briefcase-fill"></i>
                 </div>
                 <h4 class="mt-2">การยื่นโครงการ</h4>
@@ -191,22 +199,37 @@
 
         <!-- เนื้อหาด้านขวา -->
         <div class="col-md-6">
-          <h3>การบริหารโครงการ</h3>
-          <p class="text-muted">
-            จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
-          </p>
+  <h3>การบริหารโครงการ</h3>
+  <p class="text-muted">
+    จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
+  </p>
 
-          <ul class="list-unstyled">
-            <li>
-              <strong class="me-2">•</strong> ระบบโปรเจคทาสก์
-              <p class="text-muted">กำหนดทาสก์ในการทำงาน ทำให้คุณสามารถติดตามงานได้อย่างครบถ้วน</p>
-            </li>
-            <li>
-              <strong class="me-2">•</strong> การติดตามโครงการ
-              <p class="text-muted">สามารถติดตามสถิติของโครงการ ช่วยให้คุณและทีมคุณ แก้ไขและพัฒนาโครงการได้อย่างสะดวก</p>
-            </li>
-          </ul>
-        </div>
+  <ul class="list-unstyled">
+    <li class="d-flex align-items-start mb-3">
+      <div class="list-icon orange">
+        <i class="bi bi-journal-bookmark"></i>
+      </div>
+      <div class="ms-3">
+        <div class="fw-semibold">ระบบโปรเจคทาสก์</div>
+        <p class="text-muted mb-0">
+          กำหนดทาสก์ในการทำงาน ทำให้คุณสามารถติดตามงานได้อย่างครบถ้วน
+        </p>
+      </div>
+    </li>
+
+    <li class="d-flex align-items-start mb-3">
+      <div class="list-icon orange">
+        <i class="bi bi-pie-chart"></i>
+      </div>
+      <div class="ms-3">
+        <div class="fw-semibold">การติดตามโครงการ</div>
+        <p class="text-muted mb-0">
+          สามารถติดตามสถิติของโครงการ ช่วยให้คุณและทีมคุณ แก้ไขและพัฒนาโครงการได้อย่างสะดวก
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
 
       </div>
     </div>
@@ -232,18 +255,32 @@
             โครงการที่คุณสร้างสามารถยื่นข้อเสนอเพื่อได้รับการประเมินภายในระบบได้
           </p>
 
-          <ul class="list-unstyled">
-            <li>
-              <strong class="me-2">•</strong> ระบบประเมินโครงการ
-              <p class="text-muted">ผู้ทรงคุณวุฒิจะทำการประเมินโครงการของคุณ</p>
-            </li>
-            <li>
-              <strong class="me-2">•</strong> ระบบการรับทุน
-              <p class="text-muted">เมื่อผ่านการประเมิน คุณจะได้รับทุนเพื่อต่อยอดโครงการ</p>
+      <ul class="list-unstyled">
+          <li class="d-flex align-items-start mb-3">
+            <div class="list-icon orange">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+          <div class="ms-3">
+            <div class="fw-semibold">ระบบประเมินโครงการ</div>
+                <p class="text-muted mb-0">
+                ผู้ทรงคุณวุฒิจะทำการประเมินโครงการของคุณ
+                </p>
+          </div>
+        </li>
+
+          <li class="d-flex align-items-start mb-3">
+            <div class="list-icon orange">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+              <div class="ms-3">
+                <div class="fw-semibold">ระบบการรับทุน</div>
+                <p class="text-muted mb-0">
+                  เมื่อผ่านการประเมิน คุณจะได้รับทุนเพื่อต่อยอดโครงการ
+                </p>
+              </div>
             </li>
           </ul>
         </div>
-
       </div>
     </div>
   </section>
@@ -269,17 +306,30 @@
           </p>
 
           <ul class="list-unstyled">
-            <li>
-              <strong class="me-2">•</strong> เรียนรู้ออนไลน์
-              <p class="text-muted">Lorem Ipsum is simply dummy text</p>
-            </li>
-            <li>
-              <strong class="me-2">•</strong> กิจกรรม workshop
-              <p class="text-muted">Lorem Ipsum is simply dummy text</p>
-            </li>
-          </ul>
-        </div>
+          <li class="d-flex align-items-start mb-3">
+            <div class="list-icon orange">
+              <i class="bi bi-pc-display-horizontal"></i>
+            </div>
+          <div class="ms-3">
+            <div class="fw-semibold">เรียนรู้ออนไลน์</div>
+                <p class="text-muted mb-0">
+                Lorem Ipsum is simply dummy text
+                </p>
+          </div>
+        </li>
 
+          <li class="d-flex align-items-start mb-3">
+            <div class="list-icon orange">
+              <i class="bi bi-puzzle"></i>
+            </div>
+              <div class="ms-3">
+                <div class="fw-semibold">กิจกรรม workshop</div>
+                <p class="text-muted mb-0">
+                  Lorem Ipsum is simply dummy text
+                </p>
+              </div>
+            </li>
+          </div>
       </div>
     </div>
   </section>
