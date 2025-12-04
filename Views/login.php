@@ -15,6 +15,9 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- jQuery 3 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -30,9 +33,11 @@
 
 <style>
 .hero-wrapper {
+    min-height: 100vh;   /*  เต็มความสูงจอ */
     background-image: url('<?= base_url("assets/img/bg-login.svg") ?>');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 </style>
 
@@ -56,8 +61,8 @@
             <!-- เมนูด้านขวา -->
             <div class="collapse navbar-collapse justify-content-end" id="topNav">
                 <ul class="navbar-nav align-items-lg-center gap-lg-3">
-
                     <li class="nav-item d-none d-lg-flex align-items-center">
+
                         <!-- ปุ่มปรับขนาดตัวอักษร -->
                         <button class="btn btn-sm btn-outline-secondary me-1">A-</button>
                         <button class="btn btn-sm btn-outline-secondary me-3">A+</button>
@@ -98,7 +103,6 @@
                     <div class="row">
                         <div class="col-12 text-center mb-3 desktop-title-area">
                             <img src="<?= base_url('assets/img/logo-login2.svg'); ?>" alt="Lifelong" class="me-2 logo-img">
-
                             <div class="form-subtitle">เข้าสู่ระบบ CMU School of Lifelong Education</div>
                             <div class="form-title">Chiang Mai University</div>
                         </div>
@@ -110,8 +114,7 @@
                             <!-- ฝั่งซ้าย: ปุ่ม Social Login -->
                             <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                                 <h6 class="fw-semibold mb-3 text-center text-lg-start">ลงชื่อเข้าใช้ด้วยตัวเลือกอื่น ๆ</h6>
-
-                                <div class="d-grid gap-2">
+                                <div class="d-grid gap-3">
 
                                     <!-- Google--> 
                                     <button type="button" class="provider-btn btn-google">
@@ -130,12 +133,11 @@
                                         <img src="<?= base_url('assets/img/logo-cmu.svg'); ?>" class="img-fluid me-2" style="width: 20px; height: 20px;">
                                         ลงชื่อเข้าใช้ด้วย CMU Account
                                     </button>
-
                                 </div>
 
                                 <!-- สมัครสมาชิก -->
                                 <div class="my-4">
-                                    <div class="text-center text-muted small">หากคุณยังไม่มีบัญชี ?</div>
+                                    <div class="text-start text-muted small">หากคุณยังไม่มีบัญชี ?</div>
                                     <div class="d-grid mt-2">
                                         <button class="btn btn-outline-dark signup-outline">สมัครสมาชิก</button>
                                     </div>
@@ -154,26 +156,24 @@
                             </div>
 
                             <!-- ฝั่งขวา: Login account -->
-                            <div class="col-12 col-lg-5 split-line">
+                            <div class="col-12 col-lg-5 split-line mt-5">
                                 <h6 class="fw-semibold mb-3 text-center text-lg-start">ลงชื่อเข้าใช้ด้วย CMU Lifelong Account</h6>
-
                                 <form method="post" action="#">
 
                                     <!-- Username -->
                                     <div class="mb-3">
                                         <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
                                             <input type="text" class="form-control" placeholder="บัญชีผู้ใช้">
-                                            <span class="input-group-text d-none d-md-inline">@lifelong.cmu.ac.th</span>
+                                            <span class="input-group-text d-none d-md-inline bg-body-secondary">@lifelong.cmu.ac.th</span>
                                         </div>
-
                                         <small class="text-muted d-md-none">@lifelong.cmu.ac.th</small>
                                     </div>
 
                                     <!-- Password -->
                                     <div class="mb-3">
                                         <div class="input-group">
-                                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
                                             <input type="password" class="form-control" placeholder="รหัสผ่าน">
                                         </div>
                                     </div>
@@ -183,7 +183,6 @@
                                         <a href="<?= base_url('desktop'); ?>" class="btn btn-primary-purple">เข้าสู่ระบบ</a>
                                     </div>
 
-
                                     <!-- Help -->
                                     <div class="text-center mt-2">
                                         <a href="#" class="help-link">มีปัญหาในการเข้าสู่ระบบ?</a>
@@ -192,7 +191,6 @@
                             </div>
                         </div>
                     </div> <!-- end login-card-inner -->
-
                 </div> <!-- end login-card -->
             </div>
         </div>
@@ -225,9 +223,6 @@
 
     </div><!-- end container -->
 </div><!-- end hero-wrapper -->
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     // เหตุการณ์คลิกปุ่ม provider login
