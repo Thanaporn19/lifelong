@@ -69,7 +69,6 @@
     </nav>
   </header>
 
-
   <!-- =========================== HERO SECTION =========================== -->
 <section class="hero-section">
 
@@ -89,24 +88,18 @@
         <div class="hero-content text-white">
 
           <h1 class="hero-title">
-            <strong>จัดการโครงการ</strong> พัฒนาหลักสูตร<br>
-            ต่อยอดกิจกรรม <strong>แบบครบวงจร</strong>
+            <strong> จัดการโครงการ </strong> พัฒนาหลักสูตร <br> ต่อยอดกิจกรรม <strong> แบบครบวงจร </strong>
           </h1>
 
-          <!-- ปุ่ม CTA ติดกับข้อความ -->
-          <div class="mt-4 hero-btn-wrapper">
-            <a class="btn btn-orange btn-register" href="<?= base_url('login'); ?>">เริ่มต้นใช้งาน →</a>
-          </div>
-
+            <div class="mt-4 hero-btn-wrapper">
+              <a class="btn btn-hero-cta" href="<?= base_url('login'); ?>"> เริ่มต้นใช้งาน →
+              </a>
+            </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
-
-
 
   <!-- =========================== FEATURE CARDS =========================== -->
   <section class="py-5">
@@ -128,11 +121,10 @@
             </p>
 
             <!-- ปุ่มเรียนรู้เพิ่มเติม -->
-            <a class="btn btn-success btn-sm mt-3" href="#">เรียนรู้โครงการ</a>
+            <a class="btn btn-project-cta btn-sm mt-3" href="#">เรียนรู้โครงการ</a>
 
           </div>
         </div>
-
 
         <!-- คอลัมน์ขวา: กล่องฟีเจอร์แบบเลื่อน -->
         <div class="col-lg-8">
@@ -176,11 +168,9 @@
                   หลักสูตรมากมายเพื่อการจัดการโครงการทั้งแบบออนไลน์และแบบอบรมเชิงปฏิบัติ
                 </p>
               </div>
-
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -198,39 +188,36 @@
         </div>
 
         <!-- เนื้อหาด้านขวา -->
-        <div class="col-md-6">
-  <h3>การบริหารโครงการ</h3>
-  <p class="text-muted">
-    จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
-  </p>
-
-  <ul class="list-unstyled">
-    <li class="d-flex align-items-start mb-3">
+  <div class="col-md-6">
+      <h3>การบริหารโครงการ</h3>
+        <p class="text-muted"> จัดระเบียบโครงการด้วยโปรเจคทาสก์และสามารถติดตามการดำเนินงานของโครงการได้อย่างครอบคลุม
+        </p>
+          <ul class="list-unstyled">
+          <li class="d-flex align-items-start mb-3">
       <div class="list-icon orange">
         <i class="bi bi-journal-bookmark"></i>
       </div>
-      <div class="ms-3">
-        <div class="fw-semibold">ระบบโปรเจคทาสก์</div>
+        <div class="ms-3">
+          <div class="fw-semibold">ระบบโปรเจคทาสก์</div>
         <p class="text-muted mb-0">
           กำหนดทาสก์ในการทำงาน ทำให้คุณสามารถติดตามงานได้อย่างครบถ้วน
         </p>
-      </div>
-    </li>
+        </div>
+          </li>
 
-    <li class="d-flex align-items-start mb-3">
-      <div class="list-icon orange">
-        <i class="bi bi-pie-chart"></i>
-      </div>
-      <div class="ms-3">
-        <div class="fw-semibold">การติดตามโครงการ</div>
-        <p class="text-muted mb-0">
-          สามารถติดตามสถิติของโครงการ ช่วยให้คุณและทีมคุณ แก้ไขและพัฒนาโครงการได้อย่างสะดวก
-        </p>
-      </div>
-    </li>
-  </ul>
-</div>
-
+            <li class="d-flex align-items-start mb-3">
+              <div class="list-icon orange">
+              <i class="bi bi-pie-chart"></i>
+              </div>
+              <div class="ms-3">
+                  <div class="fw-semibold">การติดตามโครงการ</div>
+                  <p class="text-muted mb-0">
+                    สามารถติดตามสถิติของโครงการ ช่วยให้คุณและทีมคุณ แก้ไขและพัฒนาโครงการได้อย่างสะดวก
+                  </p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -338,22 +325,20 @@
   <!-- =========================== CTA BAR =========================== -->
   <section class="cta-bar py-5" 
     style="background-image: url('<?= base_url("assets/img/bg.svg"); ?>');">
-
     <div class="container d-flex justify-content-between align-items-center">
 
-      <!-- ข้อความ CTA -->
-<div class="title-wrapper d-flex align-items-center gap-3">
-    <div class="icon-circle orange">
-        <i class="bi bi-send"></i>
-    </div>
-    <h4 class="mb-0 text-white">เริ่มต้นใช้งานระบบไปกับเรา</h4>
-</div>
+        <!-- ข้อความ CTA -->
+      <div class="title-wrapper d-flex align-items-center gap-3">
+        <div class="icon-circle orange">
+          <i class="bi bi-send"></i>
+        </div>
+        <h4 class="mb-0 text-white">เริ่มต้นใช้งานระบบไปกับเรา</h4>
+     </div>
 
       <!-- ปุ่ม CTA -->
-      <a class="btn btn-orange btn-register" href="#"> เริ่มเข้าสู่ระบบ → </a>
+      <a class="btn btn-hero-cta" href="#"> เริ่มเข้าสู่ระบบ → </a>
 
     </div>
-
   </section>
 
 
