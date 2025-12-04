@@ -45,6 +45,49 @@
   color: #000 !important;
 }
 
+.btn-hero-cta {
+  background-color: #fd7e14;   /* สีส้ม */
+  color: #ffffff;              /* ตัวอักษรสีขาว */
+  border-radius: 6px;          /* สี่เหลี่ยม */
+  padding: 14px 32px;          /* เพิ่มความสมดุลปุ่ม */
+  font-size: 18px;             /* ✅ ขนาดตัวอักษรพอดีปุ่ม */
+  font-weight: 600;            /* ตัวหนังสือคม ชัด */
+  line-height: 1;              /* ✅ ไม่ให้ตัวอักษรลอย */
+  border: 2px solid #fd7e14;
+  transition: all 0.3s ease;
+}
+
+/* ตอน Hover */
+.btn-hero-cta:hover {
+  background-color: #ffffff;
+  color: #fd7e14;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.btn-project-cta {
+  background-color: #198754;   /* สีเขียว Bootstrap */
+  color: #ffffff;              /* ตัวอักษรสีขาว */
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 6px;          /* สี่เหลี่ยม */
+  border: 2px solid #198754;
+  transition: all 0.3s ease;   /* เปลี่ยนลื่น */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ตอนเอาเมาส์ไปแตะ */
+.btn-project-cta:hover {
+  background-color: #ffffff;  /*  ปุ่มสีขาว */
+  color: #198754;             /*  ตัวอักษรสีเขียว */
+  border-radius: 50px;        /*  วงรี */
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 22px rgba(25, 135, 84, 0.35);
+  transform: translateY(-2px);
+}
+
 /* ปุ่ม Register */
 .btn-register {
   background: #f08101;
@@ -63,7 +106,7 @@
   background-color: #f08101;
   color: #fff !important;
   border: none;
-  border-radius: 999px;
+  border-radius: 6px;          /* สี่เหลี่ยม */
   font-weight: 600;
 }
 
@@ -88,8 +131,6 @@
     padding-top: 100px;
   }
 }
-
-
 
 /* ==========================================================
    HERO SECTION
@@ -145,8 +186,6 @@
 .hero-title strong {
   font-weight: 600;
 }
-
-
 
 /* ==========================================================
    SCROLL BOARD SECTION
@@ -234,7 +273,6 @@
   background-color: #fd7e14;
 }
 
-
 /* ==========================================================
    CTA BAR SECTION
 ========================================================== */
@@ -251,8 +289,6 @@
   object-fit: contain;
   margin: 0 auto 10px auto;
 }
-
-
 
 /* ==========================================================
    SOCIAL ICONS
@@ -276,8 +312,6 @@
   color: #ffffff;
   font-size: 20px;
 }
-
-
 
 /* ==========================================================
    FOOTER
