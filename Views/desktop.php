@@ -75,12 +75,12 @@
       <ul class="nav justify-content-center py-2 gap-3">
 
           <li class="nav-item">
-              <a class="nav-link active" href="#"><i class="bi bi-grid-fill menu-icon"></i> หน้าหลัก</a>
+              <a class="nav-link active" href="#"><i class="bi bi-grid menu-icon"></i> หน้าหลัก</a>
           </li>
 
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                  <i class="bi bi-mortarboard-fill menu-icon"></i> การเรียนรู้
+                  <i class="bi bi-mortarboard menu-icon"></i> การเรียนรู้
               </a>
               <ul class="dropdown-menu">
                   <li><a class="dropdown-item">หน้ารวมการเรียนรู้</a></li>
@@ -88,12 +88,12 @@
               </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-journal-text menu-icon"></i> จัดการโครงการ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-journal-bookmark menu-icon"></i> จัดการโครงการ</a></li>
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-folder2-open menu-icon"></i> กิจกรรม</a></li>
 
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                  <i class="bi bi-clipboard2-check menu-icon"></i> ระบบประเมิน
+                  <i class="bi bi-graph-up menu-icon"></i> ระบบประเมิน
               </a>
               <ul class="dropdown-menu">
                   <li><a class="dropdown-item">ระบบประเมินผู้เรียน</a></li>
@@ -102,7 +102,7 @@
               </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pie-chart-fill menu-icon"></i> ผลการดำเนินงาน</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-pie-chart menu-icon"></i> ผลการดำเนินงาน</a></li>
 
       </ul>
   </nav>
@@ -131,15 +131,15 @@
     <div class="col-lg-9">
       <div class="row g-4">
 
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt1.png"><div class="card-prompt-number">12</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt2.png"><div class="card-prompt-number">6</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt3.png"><div class="card-prompt-number">124</div></div></div>
-        <div class="col-md-3"><div class="card card-prompt position-relative"><img src="assets/img/img-dt4.png"><div class="card-prompt-number">321</div></div></div>
+        <div class="col-md-2"><div class="card card-prompt position-relative"><img src="assets/img/img-dt1.png"><div class="card-prompt-number">12</div></div></div>
+        <div class="col-md-2"><div class="card card-prompt position-relative"><img src="assets/img/img-dt2.png"><div class="card-prompt-number">6</div></div></div>
+        <div class="col-md-2"><div class="card card-prompt position-relative"><img src="assets/img/img-dt3.png"><div class="card-prompt-number">124</div></div></div>
+        <div class="col-md-2"><div class="card card-prompt position-relative"><img src="assets/img/img-dt4.png"><div class="card-prompt-number">321</div></div></div>
 
       </div>
     </div>
 
-    <!-- ปฏิทินใหม่ด้านขวา -->
+    <!-- ปฏิทินด้านขวา -->
     <div class="col-lg-3">
       <div class="calendar-box">
 
