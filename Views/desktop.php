@@ -59,7 +59,10 @@
 
           <!-- Profile -->
           <div class="dropdown">
-              <a class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+              <a href="#"
+                 class="d-flex align-items-center text-decoration-none dropdown-toggle profile-toggle"
+                 data-bs-toggle="dropdown"
+                 role="button">
                 <img src="assets/img/pro.svg" class="rounded-circle me-2" width="38">
                 <span class="fw-semibold text-dark">ทศพล ศรีนุญ</span>
               </a>
@@ -79,7 +82,7 @@
           </li>
 
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                   <i class="bi bi-mortarboard menu-icon"></i> การเรียนรู้
               </a>
               <ul class="dropdown-menu">
@@ -92,7 +95,7 @@
           <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-folder2-open menu-icon"></i> กิจกรรม</a></li>
 
           <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                   <i class="bi bi-graph-up menu-icon"></i> ระบบประเมิน
               </a>
               <ul class="dropdown-menu">
