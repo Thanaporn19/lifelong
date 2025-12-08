@@ -106,7 +106,7 @@
       <div class="row align-items-center g-4">
 
         <!-- คอลัมน์ซ้าย: ข้อความอธิบายโครงการ -->
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <div class="feature-intro p-4">
 
             <!-- โลโก้ในส่วน Feature -->
@@ -126,7 +126,7 @@
         </div>
 
         <!-- คอลัมน์ขวา: กล่องฟีเจอร์แบบเลื่อน -->
-        <div class="col-lg-8">
+        <div class="col-lg-6">
             <div class="scroll-board-wrapper position-relative">
 
         <!-- วงกลมพื้นหลัง -->
