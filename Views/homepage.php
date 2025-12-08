@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <!-- base URL ของเว็บไซต์ ใช้สำหรับกำหนด path ให้ชัดเจน -->
+  <!-- base URL ของเว็บไซต์ ใช้กำหนด path  -->
   <base href="<?= base_url('/') ?>">
 
-  <!-- กำหนดชุดตัวอักษรสำหรับหน้าเว็บ -->
+  <!-- กำหนดชุดตัวอักษรหน้าเว็บ -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ชื่อเว็บไซต์ที่แสดงบนแท็บเบราว์เซอร์ -->
   <title>วิทยาลัยการศึกษาตลอดชีวิต</title>
@@ -27,7 +27,6 @@
   <link rel="stylesheet" href="<?= base_url('assets/css/homepage.css'); ?>">
   
   <link href="<?= base_url('assets/css/style.css'); ?>" rel="stylesheet">
-  
 
 </head>
 
@@ -139,7 +138,7 @@
             <!-- CARD 1 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle orange">
-                  <i class="bi bi-easel-fill"></i>
+                  <i class="bi bi-easel"></i>
                 </div>
                 <h4 class="mt-2">การบริหารโครงการ</h4>
                 <p class="text-muted mb-0">
@@ -150,7 +149,7 @@
             <!-- CARD 2 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle blue">
-                  <i class="bi bi-briefcase-fill"></i>
+                  <i class="bi bi-briefcase"></i>
                 </div>
                 <h4 class="mt-2">การยื่นโครงการ</h4>
                 <p class="text-muted mb-0">
@@ -161,7 +160,7 @@
             <!-- CARD 3 -->
               <div class="card feature-card p-3 shadow-sm text-center" style="min-width: 250px;">
                 <div class="icon-circle green">
-                  <i class="bi bi-mortarboard-fill"></i>
+                  <i class="bi bi-mortarboard"></i>
                 </div>
                 <h4 class="mt-2">หลักสูตรการเรียนรู้</h4>
                 <p class="text-muted mb-0">
@@ -176,7 +175,7 @@
   </section>
 
   <!-- =========================== CONTENT SECTION 1 =========================== -->
-  <section class="py-5 bg-light">
+  <section class="py-5 ">
     <div class="container">
       <div class="row align-items-center g-4">
 
@@ -222,9 +221,8 @@
     </div>
   </section>
 
-
   <!-- =========================== CONTENT SECTION 2 =========================== -->
-  <section class="py-5">
+  <section class="py-5 ">
     <div class="container">
       <div class="row align-items-center g-4">
 
@@ -272,9 +270,8 @@
     </div>
   </section>
 
-
   <!-- =========================== CONTENT SECTION 3 =========================== -->
-  <section class="py-5 bg-light">
+  <section class="py-5 ">
     <div class="container">
       <div class="row align-items-center g-4">
 
@@ -321,7 +318,6 @@
     </div>
   </section>
 
-
   <!-- =========================== CTA BAR =========================== -->
   <section class="cta-bar py-5" 
     style="background-image: url('<?= base_url("assets/img/bg.svg"); ?>');">
@@ -340,7 +336,6 @@
 
     </div>
   </section>
-
 
   <!-- =========================== FOOTER =========================== -->
 <footer class="site-footer">
@@ -389,8 +384,6 @@
   </div>
 </footer>
 
-
-
   <!-- =========================== JS Scripts =========================== -->
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -414,6 +407,5 @@
       }
     });
   </script>
-
 </body>
 </html>
