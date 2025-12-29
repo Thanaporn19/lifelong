@@ -1,0 +1,329 @@
+/* ==========================================================
+   HEADER – Transparent → Solid 
+========================================================== */
+
+/* โลโก้ใน Navbar */
+.logo-navbar {
+  width: 250px;
+  height: auto;
+}
+
+/* ส่วนหัวของเว็บ */
+.site-header {
+  width: 100%;
+  transition: 0.35s ease;
+  z-index: 1000;
+}
+
+/* Navbar โปร่งใส → ขาวเมื่อเลื่อน */
+.main-navbar {
+  background: transparent !important;
+  transition: 0.35s ease;
+}
+
+.site-header.scrolled .main-navbar {
+  background: #ffffff !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+/* ปุ่ม Login (โปร่งใส) */
+.btn-login {
+  color: white !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  transition: color 0.3s ease;
+}
+
+/* สีปุ่ม Login ตอน scroll */
+.site-header.scrolled .btn-login {
+  color: #000 !important;
+}
+
+.btn-hero-cta {
+  background-color: #fd7e14;   /* สีส้ม */
+  color: #ffffff;              /* ตัวอักษรสีขาว */
+  border-radius: 6px;          /* สี่เหลี่ยม */
+  padding: 14px 32px;          /* เพิ่มความสมดุลปุ่ม */
+  font-size: 18px;             /* ✅ ขนาดตัวอักษรพอดีปุ่ม */
+  font-weight: 600;            /* ตัวหนังสือคม ชัด */
+  line-height: 1;              /* ✅ ไม่ให้ตัวอักษรลอย */
+  border: 2px solid #fd7e14;
+  transition: all 0.3s ease;
+}
+
+/* ตอน Hover */
+.btn-hero-cta:hover {
+  background-color: #ffffff;
+  color: #fd7e14;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+}
+
+.btn-project-cta {
+  background-color: #198754;   /* สีเขียว Bootstrap */
+  color: #ffffff;              /* ตัวอักษรสีขาว */
+  padding: 10px 26px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 6px;          /* สี่เหลี่ยม */
+  border: 2px solid #198754;
+  transition: all 0.3s ease;   /* เปลี่ยนลื่น */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ตอนเอาเมาส์ไปแตะ */
+.btn-project-cta:hover {
+  background-color: #ffffff;  /*  ปุ่มสีขาว */
+  color: #198754;             /*  ตัวอักษรสีเขียว */
+  border-radius: 50px;        /*  วงรี */
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 22px rgba(25, 135, 84, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ปุ่ม Register */
+.btn-register {
+  background: #f08101;
+  color: #fff !important;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+/* ปุ่ม Register เปลี่ยนสีตอน scroll */
+.site-header.scrolled .btn-register {
+  background: #44936a !important;
+}
+
+/* ปุ่มสีส้ม */
+.btn-orange {
+  background-color: #f08101;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;          /* สี่เหลี่ยม */
+  font-weight: 600;
+}
+
+.btn-orange:hover {
+  background-color: #f08101;
+  color: #fff !important;
+}
+
+/* โลโก้หดลงตอน scroll */
+.site-header.scrolled .logo-img {
+  transform: scale(0.88);
+  transition: 0.35s ease;
+}
+
+/* ระยะห่างบนของ hero */
+.hero-container {
+  padding-top: 150px;
+}
+
+@media (max-width: 991.98px) {
+  .hero-container {
+    padding-top: 100px;
+  }
+}
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+/* พื้นที่ Hero */
+.hero-section {
+  position: relative;
+  min-height: 580px;
+  overflow: hidden;
+}
+
+/* รูปพื้นหลัง Hero */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Overlay โปร่งใส */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: transparent !important;
+}
+
+/* กล่อง Hero (ข้อความอยู่กลางจอ) */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 4;
+  transform: translateY(-60px);
+}
+
+/* ข้อความ Hero */
+.hero-title {
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 200;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* คำที่เน้น */
+.hero-title strong {
+  font-weight: 600;
+}
+
+/* ==========================================================
+   SCROLL BOARD SECTION
+========================================================== */
+
+/* Card เลื่อนใน ScrollBoard */
+.scroll-board .card {
+  min-width: 200px;
+  height: 300px;
+  flex-shrink: 1;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  position: relative;
+  z-index: 3;
+}
+
+/* Hover เด้งเล็กน้อย */
+.scroll-board .card:hover {
+  transform: translateY(-5px);
+}
+
+/* วงกลมพื้นหลังใหญ่ */
+.scroll-board-wrapper {
+  position: relative;
+  padding: 50px 0;
+  overflow: visible !important;
+}
+
+/* วงกลมสีม่วงด้านหลัง ScrollCard */
+.bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  background: #7848d1;
+  opacity: 0.6;
+  border-radius: 50%;
+  filter: blur(0.5px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* วงกลมไอคอนใน ScrollCard */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: rgb(243, 241, 240);
+  margin: 0 auto 10px auto;
+}
+
+/* สีของวงกลมแต่ละแบบ */
+.icon-circle.green {
+   background-color: #28a745; 
+}
+.icon-circle.blue  {
+   background-color: #007bff; 
+}
+.icon-circle.orange { 
+  background-color: #fd7e14;
+}
+
+.list-icon {
+  width: 40px;             /* ขยายกล่องเล็กน้อยให้พอดีกับไอคอน */
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;         /* ลดขนาดฟอนต์ให้พอดีกับกล่อง */
+  color: white;
+  flex-shrink: 0;          /* ป้องกันไอคอนบีบตัว */
+}
+
+.list-icon.orange {
+  background-color: #fd7e14;
+}
+
+/* ==========================================================
+   CTA BAR SECTION
+========================================================== */
+
+.cta-bar .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* รูปไอคอนคุณสมบัติ */
+.feature-icon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;
+}
+
+/* ==========================================================
+   SOCIAL ICONS
+========================================================== */
+
+/* วงกลมไอคอนโซเชียล */
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #343131;
+  border-radius: 50%;
+  margin-right: 12px;
+  text-decoration: none;
+}
+
+/* สีและขนาดของไอคอน */
+.social-icon i {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+/* พื้นหลัง Footer */
+.site-footer {
+  background: url('assets/img/footer-bg.svg') center/cover no-repeat,
+              #000;
+}
+
+/* ชั้นมืดทับ Footer */
+.site-footer::before {
+  background: rgba(0,0,0,0.75);
+}
+
+/* ลบเส้นใต้ลิงก์ใน Footer */
+.site-footer a {
+  text-decoration: none !important;
+}

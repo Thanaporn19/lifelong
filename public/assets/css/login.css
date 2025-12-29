@@ -1,0 +1,242 @@
+/* ------------------------------
+   ฟอนต์และพื้นฐาน
+------------------------------ */
+
+/* กล่องใหญ่ของหน้า login มีพื้นหลังเป็นภาพ + กำหนดให้สูงเต็มจอ */
+
+.desktop-title-area {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.row.justify-content-center.align-items-center {
+    min-height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* ------------------------------
+   TOP NAVBAR
+------------------------------ */
+.top-navbar {
+    background-color: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.top-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+.top-navbar .brand-text-small {
+    font-size: .8rem;
+    line-height: 1.1;
+}
+
+/* ------------------------------
+   TITLE TEXT ON HERO
+------------------------------ */
+
+.form-subtitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+    text-align: center;
+}
+
+.form-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    text-shadow: 0 1px 7px rgba(0,0,0,0.55);
+    text-align: center;
+}
+
+/* ------------------------------
+   MAIN LOGIN CARD
+------------------------------ */
+.login-card {
+    background: rgba(255,255,255,0.96);
+    height: 480px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.22);
+    backdrop-filter: blur(12px);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-card .form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 1px 7px rgba(0,0,0,0.55);
+}
+
+.login-card .form-subtitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.55);
+}
+
+/* กล่องด้านใน */
+.login-card-inner {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+}
+
+/* ------------------------------
+   ปุ่ม Login Provider
+------------------------------ */
+.provider-btn {
+    border-radius: 6px;
+    font-weight: 600;
+    border-width: 1.5px;
+    padding: 12px 18px;   /* ความสูง */
+    font-size: 15px;
+    width: 70%;          /* ปรับความกว้าง */
+    margin-left: 0;     /* ชิดซ้าย */
+    margin-right: auto;/* ดันออกจากขวา */
+}
+
+.btn-google {
+    border-color: #ffffff;
+}
+
+.btn-line {
+    background-color: #06C755;
+    border-color: #06C755;
+    color: #ffffff;
+}
+
+.btn-cmu {
+    border-color: #6c2c7b;
+}
+
+.signup-outline {
+    border-radius: 6px;
+    padding: .6rem 1.25rem;
+    font-weight: 500;
+    width: 70%;          /* ปรับความกว้างตรงนี้ */
+    margin-left: 0;     /* ชิดซ้าย */
+    margin-right: auto;/* ดันออกจากขวา */
+}
+
+/* เส้นแบ่งแนวตั้ง */
+.vertical-split-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vertical-split-line .line {
+    width: 2px;
+    height: 130px;
+    background-color: #e4e4e4;
+}
+
+.vertical-split-line .text {
+    font-weight: 600;
+    color: #b4b2b2;
+}
+
+/* CMU purple button */
+.btn-primary-purple {
+    background-color: #6f3fa8;
+    border-color: #6f3fa8;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+.btn-primary-purple:hover {
+    background-color: #5a308b;
+    border-color: #5a308b;
+}
+
+.help-link {
+    font-size: .9rem;
+}
+
+/* ------------------------------
+   FOOTER LOGIN PAGE
+------------------------------ */
+.lifelong-footer {
+    font-size: .85rem;
+    color: #f8f9fa;
+}
+
+.lifelong-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.lifelong-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   RESPONSIVE – MOBILE
+------------------------------ */
+@media (max-width: 991.98px) {
+
+    .hero-wrapper {
+        background-position: center bottom;
+    }
+
+    .login-card-inner {
+        border-radius: 16px;
+        padding: 1.5rem 1.25rem;
+    }
+
+    .split-line {
+        border-left: none;
+        border-top: 1px solid #e4e4e4;
+        margin-top: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .desktop-title-area {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+/* -------------------------------------------------
+   FIX: ปุ่ม Google / Line / CMU ไม่ให้มั่วตอนย่อจอ
+------------------------------------------------- */
+.provider-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 991.98px) {
+    .provider-group {
+        flex-direction: column;   /* ย่อจอ  */
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    .provider-btn,
+    .signup-outline {
+        width: 100%;               /* ปุ่มเต็มความกว้าง */
+        text-align: center;
+    }
+
+    .vertical-split-line {
+        display: none;             /* ซ่อนเส้นแบ่งแนวตั้งในมือถือ */
+    }
+}

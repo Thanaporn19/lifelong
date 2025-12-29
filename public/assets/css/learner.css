@@ -1,0 +1,152 @@
+/* ------------------------------ TOP BAR ------------------------------ */
+.topbar {
+    background: #ffffff !important;
+}
+
+/* ------------------------------ MENU BAR ------------------------------ */
+/* เส้นกั้นเมนูบาร์ทั้งหมด */
+/* เส้นกั้นทุกเมนู */
+.menubar .nav-item {
+  position: relative;
+  padding: 0 14px;
+}
+
+/* เส้นซ้ายของทุกเมนู รวมตัวแรกด้วย */
+.menubar .nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 55px;
+  background-color: #dcdcdc;
+}
+
+/* เส้นขวาของเมนูสุดท้าย */
+.menubar .nav-item:last-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 55px;
+  background-color: #dcdcdc;
+}
+
+
+
+/* หน้าหลักสีเขียว */
+.menubar .nav-link.home-active {
+    color: #17af7b !important; /* เขียว */
+    font-weight: 600;
+}
+
+/* ไอคอนหน้าหลักสีเขียว */
+.menubar .nav-link.home-active .menu-icon {
+    color: #17af7b !important;
+}
+
+/* ถ้า hover ให้ยังเป็นสีเขียว */
+.menubar .nav-link.home-active:hover {
+    color: #17af7b !important;
+}
+
+.menubar .nav-link.dropdown-toggle {
+    color: black  !important;
+}
+
+.menubar .nav-link.dropdown-toggle .menu-icon {
+    color: black !important;
+}
+
+.menubar .nav-link {
+    color: black !important;
+}
+
+.menubar .nav-link .menu-icon {
+    color: black !important;
+}
+
+/* Dropdown */
+.dropdown span {
+    color: black !important;
+}
+
+.dropdown-menu {
+    font-size: 15px;
+}
+
+.profile-toggle {
+    cursor: pointer !important;
+}
+
+.navbar-prompt { 
+    background:#fff !important; 
+    box-shadow:0 2px 6px rgba(0,0,0,0.08) !important;
+}
+
+.btn-success {
+    color: #17af7b !important;
+    background: #9de7cf !important;
+}
+
+.btn-twin-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius : 0;
+}
+
+.btn-twin-right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.img-learner {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+}
+/* ------------------------------ FOOTER ------------------------------ */
+
+.site-footer {
+    background: url('assets/img/footer-bg.svg') center/cover no-repeat, #000;
+    position: relative;       /* ต้องมีสำหรับ ::before */
+    padding-bottom: 10px;     /* ให้เผื่อพื้นที่ */
+}
+
+/* ชั้นมืดทับ Footer */
+.site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;                  /* ครอบเต็มพื้นที่ */
+    background: rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+/* เนื้อหา footer ให้อยู่เหนือชั้นมืด */
+.site-footer * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ลบเส้นใต้ลิงก์ */
+.site-footer a {
+    text-decoration: none !important;
+}
+
+/* ไอคอนโซเชียล */
+.social-icon {
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* โลโก้ท้าย */
+.logo-img {
+    height: 40px;
+}
+

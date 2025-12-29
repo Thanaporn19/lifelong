@@ -1,0 +1,27 @@
+/* ===================================================
+   GLOBAL STYLES (เพิ่มคอมเมนต์อธิบายแต่ละส่วน)
+=================================================== */
+
+/* ------------------------------
+   FONT – ตั้งค่าฟอนต์หลักทั่วทั้งเว็บไซต์
+------------------------------ */
+/* ------------------------------
+   FONT VARIABLE ตั้งค่าฟอนต์หลักของเว็บ
+------------------------------ */
+:root {
+  /* กำหนดฟอนต์หลักให้เป็น Prompt และมี fallback เป็น system-ui */
+  --bs-font-sans-serif: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* ใช้ฟอนต์ Prompt กับทุก element ในหน้า */
+body, html, * {
+  /* บังคับให้ทุก element ใช้ฟอนต์ Prompt */
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* บังคับให้ Navbar, ปุ่ม, heading และข้อความใช้ฟอนต์เดียวกัน */
+.navbar, .navbar-brand, .btn, h1, h2, h3, h4, h5, h6, p, span, li, a {
+  /* ย้ำฟอนต์อีกชั้นสำหรับ element สำคัญ ๆ */
+  font-family: 'Prompt', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
